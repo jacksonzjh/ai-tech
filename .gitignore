@@ -1,7 +1,8 @@
 .DS_Store
 node_modules
 /dist
-
+deploy.sh
+ProjectTree.txt
 
 # local env files
 .env.local
