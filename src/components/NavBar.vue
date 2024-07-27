@@ -7,7 +7,7 @@
 
 <script>
 export default {
-  name: 'NavBarComponent'
+  name: 'NavBar'
 }
 </script>
 
