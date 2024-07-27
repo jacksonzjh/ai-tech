@@ -1,0 +1,19 @@
+<template>
+  <nav>
+    <router-link to="/">Home</router-link>
+    <router-link to="/blogs">Blogs</router-link>
+  </nav>
+</template>
+
+<script>
+export default {
+  name: 'NavBarComponent'
+}
+</script>
+
+<style scoped>
+nav {
+  display: flex;
+  gap: 1rem;
+}
+</style>
