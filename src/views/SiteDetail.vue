@@ -7,7 +7,7 @@
 
 <script>
 export default {
-  name: 'BlogDetail',
+  name: 'SiteDetail',
   data() {
     return {
       post: { title: '', content: '' }
@@ -20,8 +20,8 @@ export default {
   methods: {
     fetchPost(id) {
       const posts = [
-        { id: 1, title: 'First Blog Post', content: 'Content of the first post.' },
-        { id: 2, title: 'Second Blog Post', content: 'Content of the second post.' }
+        { id: 1, title: 'First Post', content: 'Content of the first post.' },
+        { id: 2, title: 'Second Post', content: 'Content of the second post.' }
       ]
       this.post = posts.find(post => post.id === parseInt(id))
     }
