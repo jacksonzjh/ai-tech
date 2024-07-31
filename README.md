@@ -29,9 +29,9 @@ src
 ## 技术栈
 
 * 前端：Vue
-* 后端：Python
-* 数据库：Redis
-* LLMOps：Dify
+* 后端：Django
+* 数据库：MySQL
+* Ai Agent：Dify
 * RAG：PostgreSQL
 * LLM：Qwen2:7b
 * Agent Tools：Flask
