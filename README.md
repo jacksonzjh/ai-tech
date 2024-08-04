@@ -33,12 +33,10 @@ src
 ## 技术栈
 
 * 前端：Vue
-* 后端：Django
-* 数据库：MySQL
-* Ai Agent：Dify
+* AI Agent：Dify
 * RAG：PostgreSQL
 * LLM：Qwen2:7b
-* Agent Tools：Flask
+* Agent Tools：Python、Flask
 
 ## 许可证
 
