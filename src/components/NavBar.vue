@@ -1,7 +1,7 @@
 <template>
   <nav>
-    <router-link to="/">Home</router-link>
-    <router-link to="/ai-techs">AI Techs</router-link>
+    <router-link to="/">主页</router-link>
+    <router-link to="/ai-techs">AI前沿技术</router-link>
   </nav>
 </template>
 

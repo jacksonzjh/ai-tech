@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1>欢迎来到我的AI技术网站</h1>
+    <h1>欢迎来到我的AI技术学习网站</h1>
   </div>
 </template>
 
