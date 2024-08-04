@@ -32,7 +32,7 @@ export default {
       this.post = posts.find(post => post.id === parseInt(id));
     },
     fetchHtmlContent(path, title) {
-      fetch(`/${path}`)
+      fetch(`${process.env.BASE_URL}${path}`)
         .then(response => {
           if (!response.ok) {
             throw new Error('网络响应不正常');
