@@ -1,12 +1,13 @@
 <!doctype html>
-<html>
+<html style='font-size:16px !important'>
 <head>
 <meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
 
-<style type='text/css'>html {overflow-x: initial !important;}:root { --bg-color:#ffffff; --text-color:#333333; --select-text-bg-color:#B5D6FC; --select-text-font-color:auto; --monospace:"Lucida Console",Consolas,"Courier",monospace; --title-bar-height:20px; }
-.mac-os-11 { --title-bar-height:28px; }
+<style type='text/css'>html {overflow-x: initial !important;}:root { --bg-color: #ffffff; --text-color: #333333; --select-text-bg-color: #B5D6FC; --select-text-font-color: auto; --monospace: "Lucida Console",Consolas,"Courier",monospace; --title-bar-height: 20px; }
+.mac-os-11 { --title-bar-height: 28px; }
 html { font-size: 14px; background-color: var(--bg-color); color: var(--text-color); font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
-body { margin: 0px; padding: 0px; height: auto; inset: 0px; font-size: 1rem; line-height: 1.42857; overflow-x: hidden; background: inherit; tab-size: 4; }
+h1, h2, h3, h4, h5 { white-space: pre-wrap; }
+body { margin: 0px; padding: 0px; height: auto; inset: 0px; font-size: 1rem; line-height: 1.42857; overflow-x: hidden; background: inherit; }
 iframe { margin: auto; }
 a.url { word-break: break-all; }
 a:active, a:hover { outline: 0px; }
@@ -22,8 +23,6 @@ body.typora-export { padding-left: 30px; padding-right: 30px; }
 @media screen and (max-width: 500px) {
   body.typora-export { padding-left: 0px; padding-right: 0px; }
   #write { padding-left: 20px; padding-right: 20px; }
-  .CodeMirror-sizer { margin-left: 0px !important; }
-  .CodeMirror-gutters { display: none !important; }
 }
 #write li > figure:last-child { margin-bottom: 0.5rem; }
 #write ol, #write ul { position: relative; }
@@ -51,7 +50,7 @@ sup.md-footnote a, sup.md-footnote a:hover { color: inherit; text-transform: inh
 #write input[type="checkbox"] { cursor: pointer; width: inherit; height: inherit; }
 figure { overflow-x: auto; margin: 1.2em 0px; max-width: calc(100% + 16px); padding: 0px; }
 figure > table { margin: 0px; }
-tr { break-inside: avoid; break-after: auto; }
+thead, tr { break-inside: avoid; break-after: auto; }
 thead { display: table-header-group; }
 table { border-collapse: collapse; border-spacing: 0px; width: 100%; overflow: auto; break-inside: auto; text-align: left; }
 table.md-table td { min-width: 32px; }
@@ -73,6 +72,7 @@ div.hr:focus { cursor: none; }
 #write.fences-no-line-wrapping .md-fences.mock-cm { white-space: pre; overflow-x: auto; }
 .md-fences.mock-cm.md-fences-with-lineno { padding-left: 8px; }
 .CodeMirror-line, twitterwidget { break-inside: avoid; }
+svg { break-inside: avoid; }
 .footnotes { opacity: 0.8; font-size: 0.9rem; margin-top: 1em; margin-bottom: 1em; }
 .footnotes + .footnotes { margin-top: 0px; }
 .md-reset { margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: top; background: 0px 0px; text-decoration: none; text-shadow: none; float: none; position: static; width: auto; height: auto; white-space: nowrap; cursor: inherit; -webkit-tap-highlight-color: transparent; line-height: normal; font-weight: 400; text-align: left; box-sizing: content-box; direction: ltr; }
@@ -87,12 +87,14 @@ blockquote > :first-child, li > :first-child { margin-top: 0px; }
 #write .footnote-line { white-space: pre-wrap; }
 @media print {
   body, html { border: 1px solid transparent; height: 99%; break-after: avoid; break-before: avoid; font-variant-ligatures: no-common-ligatures; }
-  #write { margin-top: 0px; padding-top: 0px; border-color: transparent !important; }
+  #write { margin-top: 0px; border-color: transparent !important; padding-top: 0px !important; padding-bottom: 0px !important; }
   .typora-export * { -webkit-print-color-adjust: exact; }
   .typora-export #write { break-after: avoid; }
   .typora-export #write::after { height: 0px; }
   .is-mac table { break-inside: avoid; }
+  #write > p:nth-child(1) { margin-top: 0px; }
   .typora-export-show-outline .typora-export-sidebar { display: none; }
+  figure { overflow-x: visible; }
 }
 .footnote-line { margin-top: 0.714em; font-size: 0.7em; }
 a img, img a { cursor: pointer; }
@@ -130,6 +132,7 @@ p > .md-image:only-child { display: inline-block; width: 100%; }
 }
 a.md-toc-inner { font-size: inherit; font-style: inherit; font-weight: inherit; line-height: inherit; }
 .footnote-line a:not(.reversefootnote) { color: inherit; }
+.reversefootnote { font-family: ui-monospace, sans-serif; }
 .md-attr { display: none; }
 .md-fn-count::after { content: "."; }
 code, pre, samp, tt { font-family: var(--monospace); }
@@ -160,7 +163,7 @@ mark .md-meta { color: rgb(0, 0, 0); }
 .md-fences-advanced:not(.md-focus) { background: inherit; }
 .typora-export-show-outline .typora-export-content { max-width: 1440px; margin: auto; display: flex; flex-direction: row; }
 .typora-export-sidebar { width: 300px; font-size: 0.8rem; margin-top: 80px; margin-right: 18px; }
-.typora-export-show-outline #write { --webkit-flex:2; flex: 2 1 0%; }
+.typora-export-show-outline #write { --webkit-flex: 2; flex: 2 1 0%; }
 .typora-export-sidebar .outline-content { position: fixed; top: 0px; max-height: 100%; overflow: hidden auto; padding-bottom: 30px; padding-top: 60px; width: 300px; }
 @media screen and (max-width: 1024px) {
   .typora-export-sidebar, .typora-export-sidebar .outline-content { width: 240px; }
@@ -168,7 +171,7 @@ mark .md-meta { color: rgb(0, 0, 0); }
 @media screen and (max-width: 800px) {
   .typora-export-sidebar { display: none; }
 }
-.outline-content li, .outline-content ul { margin-left: 0px; margin-right: 0px; padding-left: 0px; padding-right: 0px; list-style: none; }
+.outline-content li, .outline-content ul { margin-left: 0px; margin-right: 0px; padding-left: 0px; padding-right: 0px; list-style: none; overflow-wrap: anywhere; }
 .outline-content ul { margin-top: 0px; margin-bottom: 0px; }
 .outline-content strong { font-weight: 400; }
 .outline-expander { width: 1rem; height: 1.42857rem; position: relative; display: table-cell; vertical-align: middle; cursor: pointer; padding-left: 4px; }
@@ -199,6 +202,21 @@ mark .md-meta { color: rgb(0, 0, 0); }
 .typora-export-no-collapse-outline .outline-expander::before { content: "" !important; }
 .typora-export-show-outline .outline-item-active > .outline-item .outline-label { font-weight: 700; }
 .md-inline-math-container mjx-container { zoom: 0.95; }
+mjx-container { break-inside: avoid; }
+.md-alert.md-alert-note { border-left-color: rgb(9, 105, 218); }
+.md-alert.md-alert-important { border-left-color: rgb(130, 80, 223); }
+.md-alert.md-alert-warning { border-left-color: rgb(154, 103, 0); }
+.md-alert.md-alert-tip { border-left-color: rgb(31, 136, 61); }
+.md-alert.md-alert-caution { border-left-color: rgb(207, 34, 46); }
+.md-alert { padding: 0px 1em; margin-bottom: 16px; color: inherit; border-left: 0.25em solid rgb(0, 0, 0); }
+.md-alert-text-note { color: rgb(9, 105, 218); }
+.md-alert-text-important { color: rgb(130, 80, 223); }
+.md-alert-text-warning { color: rgb(154, 103, 0); }
+.md-alert-text-tip { color: rgb(31, 136, 61); }
+.md-alert-text-caution { color: rgb(207, 34, 46); }
+.md-alert-text { font-size: 0.9rem; font-weight: 700; }
+.md-alert-text svg { fill: currentcolor; position: relative; top: 0.125em; margin-right: 1ch; overflow: visible; }
+.md-alert-text-container::after { content: attr(data-text); text-transform: capitalize; pointer-events: none; margin-right: 1ch; }
 
 
 .CodeMirror { height: auto; }
@@ -282,137 +300,6 @@ span.cm-strikethrough { text-decoration: line-through; }
 }
 
 
-code {
-  font-family: Menlo, Monaco, Consolas, Courier New, monospace;
-  word-break: break-word;
-  border-radius: .125rem;
-  overflow-x: auto;
-  background-color: #fff5f5;
-  color: #ff502c;
-  font-size: 0.87em;
-  padding: 0.065em 0.4em;
-}
-
-a {
-  text-decoration: none;
-  color: #0269c8;
-  border-bottom: 1px solid #d1e9ff;
-}
-
-code::before {
-  content: none;
-}
-
-code::after {
-  content: none;
-}
-
-#write {
-  font-size: 16px;
-  line-height: 26px;
-  max-width: 928px;
-}
-
-@media only screen and (min-width: 87.5rem) {
-  #write {
-    max-width: 1024px;
-  }
-}
-
-@media only screen and (min-width: 112.5rem) {
-  #write {
-    max-width: 1200px;
-  }
-}
-p {
-  line-height: inherit;
-    margin-top: 22px;
-    margin-bottom: 22px;
-}
-h1 {
-  font-size: 2.5rem;
-  line-height: 2.75rem;
-  margin-bottom: 1.5rem;
-  letter-spacing: -0.0938rem;
-}
-
-h2 {
-  font-size: 1.375rem;
-  line-height: 2.125rem;
-  padding-bottom: .75rem;
-  border-bottom: .0625rem solid #ececec;
-  font-weight: bold;
-}
-
-h3 {
-  font-size: 1.25rem;
-  line-height: 1.75rem;
-  margin-top: 2.1875rem;
-  margin-bottom: .625rem;
-  padding-bottom: .3125rem;
-}
-
-h4 {
-  font-size: 1.125rem;
-  line-height: 1.625rem;
-  margin-top: 2.1875rem;
-  margin-bottom: .625rem;
-  padding-bottom: .3125rem;
-  font-weight: bold;
-}
-
-h5 {
-  font-size: 15.52px;
-  line-height: 20px;
-  margin-bottom: 24px;
-  font-weight: bold;
-}
-
-h6 {
-  font-size: 14.88px;
-  line-height: 16px;
-  margin-bottom: 12px;
-}
-
-pre,
-code,
-kbd,
-tt,
-var {
-  font-size: 0.875em;
-}
-
-blockquote {
-  color: #666;
-  padding: 10px 23px;
-  margin: 22px 0;
-  border-left: 4px solid #cbcbcb;
-  background-color: #f8f8f8;
-  font-style: normal;
-}
-
-blockquote p {
-  margin: 10px 0;
-}
-
-img {
-  border-radius: 1.25rem;
-  float: left;
-}
-
-ul {
-  padding: 0;
-  margin: 0;
-  padding-left: 1.75rem;
-}
-ul > li::marker {
-  color: black;
-  margin-bottom: 0;
-}
-ol > li::marker {
-  color: black;
-  margin-bottom: 0;
-}
 @import "";
 
 /* FONTS */
@@ -420,7 +307,7 @@ ol > li::marker {
 /* @font-face {
   font-family: "LXGWWenKai-Blod";
   font-display: block;
-  src: url("file:///C://Users//%E5%91%A8%E5%AE%8F%E5%93%B2//AppData//Roaming//Typora/themes/ladder/LXGWWenKai-Bold.woff2") format("truetype");
+  src: url("file:///C://Users//Master-J//AppData//Roaming//Typora/themes/ladder/LXGWWenKai-Bold.woff2") format("truetype");
   font-named-instance: "Blod";
 } */
 
@@ -829,8 +716,8 @@ titlebar {
 }
 
 #write {
-  padding-top: 30px;
-  padding-bottom: 30px;
+  padding-top: 100px;
+  padding-bottom: 100px;
   color: var(--tw-prose-body);
   max-width: 60ch;
 }
@@ -1619,261 +1506,10 @@ mark {
 }
 
 
-code {
-  font-family: Menlo, Monaco, Consolas, Courier New, monospace;
-  word-break: break-word;
-  border-radius: .125rem;
-  overflow-x: auto;
-  background-color: #fff5f5;
-  color: #ff502c;
-  font-size: 0.87em;
-  padding: 0.065em 0.4em;
-}
 
-a {
-  text-decoration: none;
-  color: #0269c8;
-  border-bottom: 1px solid #d1e9ff;
-}
-
-code::before {
-  content: none;
-}
-
-code::after {
-  content: none;
-}
-
-#write {
-  font-size: 16px;
-  line-height: 26px;
-  max-width: 928px;
-}
-
-@media only screen and (min-width: 87.5rem) {
-  #write {
-    max-width: 1024px;
-  }
-}
-
-@media only screen and (min-width: 112.5rem) {
-  #write {
-    max-width: 1200px;
-  }
-}
-p {
-  line-height: inherit;
-    margin-top: 22px;
-    margin-bottom: 22px;
-}
-h1 {
-  font-size: 2.5rem;
-  line-height: 2.75rem;
-  margin-bottom: 1.5rem;
-  letter-spacing: -0.0938rem;
-}
-
-h2 {
-  font-size: 1.375rem;
-  line-height: 2.125rem;
-  padding-bottom: .75rem;
-  border-bottom: .0625rem solid #ececec;
-  font-weight: bold;
-}
-
-h3 {
-  font-size: 1.25rem;
-  line-height: 1.75rem;
-  margin-top: 2.1875rem;
-  margin-bottom: .625rem;
-  padding-bottom: .3125rem;
-}
-
-h4 {
-  font-size: 1.125rem;
-  line-height: 1.625rem;
-  margin-top: 2.1875rem;
-  margin-bottom: .625rem;
-  padding-bottom: .3125rem;
-  font-weight: bold;
-}
-
-h5 {
-  font-size: 15.52px;
-  line-height: 20px;
-  margin-bottom: 24px;
-  font-weight: bold;
-}
-
-h6 {
-  font-size: 14.88px;
-  line-height: 16px;
-  margin-bottom: 12px;
-}
-
-pre,
-code,
-kbd,
-tt,
-var {
-  font-size: 0.875em;
-}
-
-blockquote {
-  color: #666;
-  padding: 10px 23px;
-  margin: 22px 0;
-  border-left: 4px solid #cbcbcb;
-  background-color: #f8f8f8;
-  font-style: normal;
-}
-
-blockquote p {
-  margin: 10px 0;
-}
-
-img {
-  border-radius: 1.25rem;
-  float: left;
-}
-
-ul {
-  padding: 0;
-  margin: 0;
-  padding-left: 1.75rem;
-}
-ul > li::marker {
-  color: black;
-  margin-bottom: 0;
-}
-ol > li::marker {
-  color: black;
-  margin-bottom: 0;
-}
-
-</style>
-
-<title>PromptEngineeringGuide</title>
-
-<style>
-
-  /* 内容区域样式 */
-  .typora-export-content {
-    max-width: 950px; /* 最大宽度，控制所有内容的宽度 */
-    margin: 0 auto; /* 上下外边距10px，左右自动居中 */
-    padding: 0 20px; /* 上下内边距为0，左右内边距为20px */
-    background-color: white; /* 内容背景色 */
-    border-radius: 8px; /* 圆角边框 */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* 阴影效果 */
-  }
-
-  /* 图片容器样式 */
-  .image-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* 确保图片居中 */
-    width: 100%;
-    margin: 20px 0;
-}
-
-.image-container img {
-  width: 100%; /* 图片宽度占满容器 */
-  max-width: 550px; /* 设置图片的最大宽度 */
-  height: auto; /* 保持宽高比 */
-  display: block; /* 确保图片自身是块级元素 */
-  margin: 0 auto; /* 在容器内居中图片 */
-}
-
-  /* 段落和标题样式 */
-  .typora-export-content p,
-  .typora-export-content h2,
-  .typora-export-content ul {
-    margin: 0 0 20px; /* 下边距 */
-  }
-
-  /* 列表样式 */
-  .typora-export-content ul {
-    padding-left: 20px;
-  }
-
-  #author {
-    text-align: center; /* 文本居中 */
-    display: block; /* 确保它是一个块级元素 */
-    font-family: "Microsoft YaHei", sans-serif; /* 设置微软雅黑字体 */
-    text-decoration: underline; /* 添加下划线 */
-    color: gray; /* 设置文字颜色为灰色 */
-  }
-
-  #post_time {
-    text-align: center; /* 文本居中 */
-    display: block; /* 确保它是一个块级元素 */
-    font-family: "Microsoft YaHei", sans-serif; /* 设置微软雅黑字体 */
-    color: gray; /* 设置文字颜色为灰色 */
-  }
-  
-  
-</style>
-
+</style><title>README</title>
 </head>
-<body class='typora-export os-windows'>
-  <div class='typora-export-content'>
-    <div id='write'>
-      <h1 id = 'title'><span>AI技术前沿：从零到精通提示工程(Prompt Engineering)</span></h1></br>
-      <p id = 'author'><span>原创作者：周锦弘</span></p>
-      <p id = 'post_time'><span>@ 2024/08/04</span></p></br>
-      <h2 id='引言'><span>引言</span></h2>
-      <p><span>在当今人工智能技术迅猛发展的时代，&quot;Prompt Engineering&quot;，即 提示工程，正逐渐成为一种关键技术。它专注于构建和完善提示词（Prompt），以引导 大语言模型（LLM）在多样化的应用场景和研究领域中发挥最大效能。精通这门技术，用户将能够深入挖掘并充分利用LLM的潜力，同时对其边界有更清晰的认识。</span></p>
-      <p><span>提示工程赋予了使用者一种能力，即通过精心设计的提示词来增强LLM处理复杂问题的能力，无论是在问答系统还是算术推理等任务中。掌握提示工程技术意味着能够设计出创新的技术解决方案，与LLM以及其他技术生态系统无缝对接。</span></p>
-      <div class="image-container">
-        <img src="https://jacksonzjh.github.io/ai-tech/Ai-TechArticles/PromptEngineeringGuide/images/p1.png" alt="Image Description">
-      </div>
-
-      <h2 id='模型参数配置'><span>模型参数配置</span></h2>
-      <p><span>当我们输入提示词与大语言模型进行交互时，我们可以通过调整特定的参数来定制模型的响应。这些参数的微调对于我们获得既可靠又精准的输出至关重要。以下是在集成不同种类的大语言模型时可能会遇到的参数设置：</span></p>
-      <ul>
-        <li><strong><span>温度（Temperature）</span></strong><span>：控制模型输出的确定性。数值越低，模型的输出越倾向于单一且明确的结果；而数值越高，模型则可能提供更多样化、更具创造性的答案。</span></li>
-        <li><strong><span>核采样（Top_p）</span></strong><span>：决定模型输出的多样性。若追求精确且基于事实的答案，应降低此参数值；反之，若希望得到更广泛的答案选项，可以适当提高。</span></li>
-        <li><strong><span>最大输出长度（Max Length）</span></strong><span>：用于指定模型在生成内容时token的最大数量，它定义了生成的上限，有助于防止生成无关紧要的冗长内容，同时也是控制成本的有效手段。</span></li>
-        <li><strong><span>频率惩罚（Frequency Penalty）</span></strong><span>：通过对频繁出现的token施加惩罚，来减少文本中的重复。惩罚的程度与token在文本中出现的频率成正比，从而降低重复词的出现概率。</span></li>
-        <li><strong><span>存在惩罚（Presence Penalty）</span></strong><span>：对所有重复的token施加相同的惩罚，不论其出现频率。这有助于避免模型在文本中过度重复使用某些词汇。</span></li>
-      </ul>
-      <p><strong><span>通常建议在temperature 与 Top_P中只调整一个，在频率惩罚和存在惩罚中只调整一个，以避免模型过度复杂化的输出以及输出的平衡性和可预测性。</span></strong></p>
-      <div class="image-container">
-        <img src="https://jacksonzjh.github.io/ai-tech/Ai-TechArticles/PromptEngineeringGuide/images/p2.png" alt="Image Description 2">
-      </div>
-
-      <h2 id='提示基础'><span>提示基础</span></h2>
-      <p><span>我们可以通过编写简单的提示词（Prompt）获得大语言模型输出结果，但结果的质量与提供的信息数量和完善度有关。</span></p>
-      <p><strong><span>一个简单的示例：</span></strong></p>
-      <blockquote><p><span>Prompt：天空是</span></p></blockquote>
-      <blockquote><p><span>LLM：蓝色的，白云</span></p></blockquote>
-      <p><span>通过上面示例可见，大语言模型能基于&quot;天空是&quot;这样的上下文内容进行续写，其结果可能出乎意料，有时甚至超越任务预期。 但是，我们可以通过改进提示词来获得更好的结果。</span></p>
-      <p><strong><span>让我们试着改进一下：</span></strong></p>
-      <blockquote><p><span>Prompt：</span></p><p><span>完善以下句子:</span></p><p><span>The sky is</span></p></blockquote>
-      <blockquote><p><span>LLM：天空是一片浩瀚的湛蓝色，无尽地延伸向地平线</span></p></blockquote>
-      <p><span>结果是不是好很多？示例中我们指导模型完善句子，结果与预期相符。提示工程旨在最佳提示词，以引导大语言模型帮助我们高效、精准的完成特定任务。</span></p>
-
-      <h2 id='提示要素'><span>提示要素</span></h2>
-      <p><span>提示词包含以下任意要素：</span></p>
-      <ul>
-        <li><strong><span>指令</span></strong><span>：提示词中的指令部分是与大语言模型沟通的直接桥梁。它清晰地传达了我们的需求，无论是寻求解答、获取信息还是请求执行特定任务。</span></li>
-        <li><strong><span>上下文</span></strong><span>：上下文信息为大语言模型提供了必要的背景知识，帮助其更好地理解问题的环境和条件，从而生成更加贴合实际的答复。</span></li>
-        <li><strong><span>输入</span></strong><span>：输入数据是大语言模型进行分析和生成回答的基础。提供准确、相关的输入数据，可以显著提高模型输出的质量和相关性。</span></li>
-        <li><strong><span>示例</span></strong><span>：示例可以作为大语言模型的参考，展示我们期望的输出格式或内容风格。</span></li>
-      </ul>
-      <p><span>为了直观展示提示要素，以下是一个简洁的示例，目的在于执行文本分类任务：</span></p>
-      <blockquote>
-        <p><span>Prompt：</span></p>
-        <p><span>请将文本分为中性、否定或肯定文本：</span></p>
-        <p><span>我觉得食物还可以。</span></p>
-        <p><span>情绪：</span></p>
-      </blockquote>
-      <blockquote><p><span>LLM：中性</span></p></blockquote>
-      <p><span>在以上示例中，我们设定了指令“将文本分类为中性、否定或肯定”，并提供了输入数据“我认为食物还可以”，随后以“情绪：”作为输出的引导词。这个基础示例没有包含上下文，但上下文信息可以作为提示的一部分，通过提供额外的示例来帮助大语言模型更准确地把握任务要求，并引导出预期的输出格式。</span></p>
-      <p><strong><span>请注意，提示词的设计应根据具体任务需求而定，上述要素并非在所有情况下都必需。</span></strong></p>
-
-      <h2 id='提示设计技巧'><span>提示设计技巧</span></h2>
-    </div>
-  </div>
+<body class='typora-export os-windows'><div class='typora-export-content'>
+<div id='write'  class=''><h1 id='jhs-ai-learning-website'><span>JH&#39;s AI Learning Website</span></h1><p><img src="src/assets/ai-tech.png" alt="Logo" width="150"/></p><h2 id='项目简介'><span>项目简介</span></h2><p><span>这是一个用于记录和分享现今前沿AI技术的学习网站。</span></p><h2 id='项目特色'><span>项目特色</span></h2><p><span>本项目由AI大语言模型【独立完成】，本人只负责整理编码、调试、发布 : )</span></p><h2 id='当前项目进度'><span>当前项目进度</span></h2><pre class="md-fences md-end-block md-fences-with-lineno ty-contain-cm modeLoaded" spellcheck="false" lang="plaintext" style="break-inside: unset;"><div class="CodeMirror cm-s-inner cm-s-null-scroll CodeMirror-wrap" lang="plaintext"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 14px; left: 43px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 39px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre><div class="CodeMirror-linenumber CodeMirror-gutter-elt"><div>15</div></div></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation" style=""><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: -39px; width: 39px;"></div><div class="CodeMirror-gutter-wrapper CodeMirror-activeline-gutter" style="left: -39px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt CodeMirror-linenumber-show" style="left: 0px; width: 30px;">1</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">src</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -39px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 30px;">2</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">├── App.vue</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -39px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 30px;">3</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">├── assets</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -39px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 30px;">4</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">│ &nbsp; ├── logo.png</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -39px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 30px;">5</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">│ &nbsp; └── styles</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -39px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 30px;">6</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">│ &nbsp; &nbsp; &nbsp; └── main.css</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -39px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 30px;">7</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">├── components</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -39px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 30px;">8</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">│ &nbsp; └── NavBar.vue</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -39px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 30px;">9</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">├── main.js</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -39px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt CodeMirror-linenumber-show" style="left: 0px; width: 30px;">10</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">├── router</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -39px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 30px;">11</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">│ &nbsp; └── index.js</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -39px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 30px;">12</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">└── views</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -39px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 30px;">13</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp;  ├── Home.vue</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -39px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 30px;">14</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp;  ├── SiteDetail.vue</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -39px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt CodeMirror-linenumber-show" style="left: 0px; width: 30px;">15</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp;  └── SiteList.vue</span></pre></div></div></div></div></div></div><div style="position: absolute; height: 0px; width: 1px; border-bottom: 0px solid transparent; top: 480px;"></div><div class="CodeMirror-gutters" style="height: 480px;"><div class="CodeMirror-gutter CodeMirror-linenumbers" style="width: 38px;"></div></div></div></div></pre><h2 id='技术栈'><span>技术栈</span></h2><ul><li><p><span>前端：Vue</span></p></li><li><p><span>AI Agent：Dify</span></p></li><li><p><span>RAG：PostgreSQL</span></p></li><li><p><span>LLM：Qwen2:7b</span></p></li><li><p><span>Agent Tools：Python、Flask</span></p></li></ul><h2 id='许可证'><span>许可证</span></h2><p><a href='LICENSE'><span>MIT</span></a></p><h2 id='联系'><span>联系</span></h2><p><span>如有任何问题或建议，请联系 </span><a href='https://github.com/jacksonzjh'><span>jacksonzjh</span></a><span>。</span></p></div></div>
 </body>
 </html>
