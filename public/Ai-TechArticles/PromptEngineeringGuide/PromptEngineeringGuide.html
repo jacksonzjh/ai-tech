@@ -1822,36 +1822,36 @@ ol > li::marker {
       <p id = 'author'><span>原创作者：周锦弘</span></p>
       <p id = 'post_time'><span>@ 2024/08/04</span></p></br>
       <h2 id='引言'><span>引言</span></h2>
-      <p><span>在当今人工智能技术迅猛发展的时代，&quot;Prompt Engineering&quot;，即 提示工程，正逐渐成为一种关键技术。它专注于构建和完善提示词（Prompt），以引导 大语言模型（LLM）在多样化的应用场景和研究领域中发挥最大效能。精通这门技术，用户将能够深入挖掘并充分利用LLM的潜力，同时对其边界有更清晰的认识。</span></p>
-      <p><span>提示工程赋予了使用者一种能力，即通过精心设计的提示词来增强LLM处理复杂问题的能力，无论是在问答系统还是算术推理等任务中。掌握提示工程技术意味着能够设计出创新的技术解决方案，与LLM以及其他技术生态系统无缝对接。</span></p>
+      <p><span>在当今人工智能技术迅猛发展的时代，&quot;Prompt Engineering&quot;，即 提示工程，正逐渐成为一种关键技术。它专注于构建和完善提示词（Prompt），以引导 大语言模型（LLM）在多样化的应用场景和研究领域中发挥最大效能。精通这门技术，用户将能够深入挖掘并充分利用LLM的潜力，同时对其边界有更清晰的认识。</span></p></br>
+      <p><span>提示工程赋予了使用者一种能力，即通过精心设计的提示词来增强LLM处理复杂问题的能力，无论是在问答系统还是算术推理等任务中。掌握提示工程技术意味着能够设计出创新的技术解决方案，与LLM以及其他技术生态系统无缝对接。</span></p></br>
       <div class="image-container">
-        <img src="https://jacksonzjh.github.io/ai-tech/Ai-TechArticles/PromptEngineeringGuide/images/p1.png" alt="Image Description">
+        <img src="https://jacksonzjh.github.io/ai-tech/Ai-TechArticles/PromptEngineeringGuide/images/p1.png" alt="Image Description"></br>
       </div>
 
       <h2 id='模型参数配置'><span>模型参数配置</span></h2>
-      <p><span>当我们输入提示词与大语言模型进行交互时，我们可以通过调整特定的参数来定制模型的响应。这些参数的微调对于我们获得既可靠又精准的输出至关重要。以下是在集成不同种类的大语言模型时可能会遇到的参数设置：</span></p>
+      <p><span>当我们输入提示词与大语言模型进行交互时，我们可以通过调整特定的参数来定制模型的响应。这些参数的微调对于我们获得既可靠又精准的输出至关重要。以下是在集成不同种类的大语言模型时可能会遇到的参数设置：</span></p></br>
       <ul>
         <li><strong><span>温度（Temperature）</span></strong><span>：控制模型输出的确定性。数值越低，模型的输出越倾向于单一且明确的结果；而数值越高，模型则可能提供更多样化、更具创造性的答案。</span></li>
         <li><strong><span>核采样（Top_p）</span></strong><span>：决定模型输出的多样性。若追求精确且基于事实的答案，应降低此参数值；反之，若希望得到更广泛的答案选项，可以适当提高。</span></li>
         <li><strong><span>最大输出长度（Max Length）</span></strong><span>：用于指定模型在生成内容时token的最大数量，它定义了生成的上限，有助于防止生成无关紧要的冗长内容，同时也是控制成本的有效手段。</span></li>
         <li><strong><span>频率惩罚（Frequency Penalty）</span></strong><span>：通过对频繁出现的token施加惩罚，来减少文本中的重复。惩罚的程度与token在文本中出现的频率成正比，从而降低重复词的出现概率。</span></li>
-        <li><strong><span>存在惩罚（Presence Penalty）</span></strong><span>：对所有重复的token施加相同的惩罚，不论其出现频率。这有助于避免模型在文本中过度重复使用某些词汇。</span></li>
+        <li><strong><span>存在惩罚（Presence Penalty）</span></strong><span>：对所有重复的token施加相同的惩罚，不论其出现频率。这有助于避免模型在文本中过度重复使用某些词汇。</span></li></br>
       </ul>
-      <p><strong><span>通常建议在temperature 与 Top_P中只调整一个，在频率惩罚和存在惩罚中只调整一个，以避免模型过度复杂化的输出以及输出的平衡性和可预测性。</span></strong></p>
+      <p><strong><span>通常建议在temperature 与 Top_P中只调整一个，在频率惩罚和存在惩罚中只调整一个，以避免模型过度复杂化的输出以及输出的平衡性和可预测性。</span></strong></p></br>
       <div class="image-container">
-        <img src="https://jacksonzjh.github.io/ai-tech/Ai-TechArticles/PromptEngineeringGuide/images/p2.png" alt="Image Description 2">
+        <img src="https://jacksonzjh.github.io/ai-tech/Ai-TechArticles/PromptEngineeringGuide/images/p2.png" alt="Image Description 2"></br>
       </div>
 
       <h2 id='提示基础'><span>提示基础</span></h2>
-      <p><span>我们可以通过编写简单的提示词（Prompt）获得大语言模型输出结果，但结果的质量与提供的信息数量和完善度有关。</span></p>
+      <p><span>我们可以通过编写简单的提示词（Prompt）获得大语言模型输出结果，但结果的质量与提供的信息数量和完善度有关。</span></p></br>
       <p><strong><span>一个简单的示例：</span></strong></p>
       <blockquote><p><span>Prompt：天空是</span></p></blockquote>
-      <blockquote><p><span>LLM：蓝色的，白云</span></p></blockquote>
-      <p><span>通过上面示例可见，大语言模型能基于&quot;天空是&quot;这样的上下文内容进行续写，其结果可能出乎意料，有时甚至超越任务预期。 但是，我们可以通过改进提示词来获得更好的结果。</span></p>
+      <blockquote><p><span>LLM：蓝色的，白云</span></p></blockquote></br>
+      <p><span>通过上面示例可见，大语言模型能基于&quot;天空是&quot;这样的上下文内容进行续写，其结果可能出乎意料，有时甚至超越任务预期。 但是，我们可以通过改进提示词来获得更好的结果。</span></p></br>
       <p><strong><span>让我们试着改进一下：</span></strong></p>
       <blockquote><p><span>Prompt：</span></p><p><span>完善以下句子:</span></p><p><span>The sky is</span></p></blockquote>
-      <blockquote><p><span>LLM：天空是一片浩瀚的湛蓝色，无尽地延伸向地平线</span></p></blockquote>
-      <p><span>结果是不是好很多？示例中我们指导模型完善句子，结果与预期相符。提示工程旨在最佳提示词，以引导大语言模型帮助我们高效、精准的完成特定任务。</span></p>
+      <blockquote><p><span>LLM：天空是一片浩瀚的湛蓝色，无尽地延伸向地平线</span></p></blockquote></br>
+      <p><span>结果是不是好很多？示例中我们指导模型完善句子，结果与预期相符。提示工程旨在最佳提示词，以引导大语言模型帮助我们高效、精准的完成特定任务。</span></p></br>
 
       <h2 id='提示要素'><span>提示要素</span></h2>
       <p><span>提示词包含以下任意要素：</span></p>
@@ -1859,7 +1859,7 @@ ol > li::marker {
         <li><strong><span>指令</span></strong><span>：提示词中的指令部分是与大语言模型沟通的直接桥梁。它清晰地传达了我们的需求，无论是寻求解答、获取信息还是请求执行特定任务。</span></li>
         <li><strong><span>上下文</span></strong><span>：上下文信息为大语言模型提供了必要的背景知识，帮助其更好地理解问题的环境和条件，从而生成更加贴合实际的答复。</span></li>
         <li><strong><span>输入</span></strong><span>：输入数据是大语言模型进行分析和生成回答的基础。提供准确、相关的输入数据，可以显著提高模型输出的质量和相关性。</span></li>
-        <li><strong><span>示例</span></strong><span>：示例可以作为大语言模型的参考，展示我们期望的输出格式或内容风格。</span></li>
+        <li><strong><span>示例</span></strong><span>：示例可以作为大语言模型的参考，展示我们期望的输出格式或内容风格。</span></li></br>
       </ul>
       <p><span>为了直观展示提示要素，以下是一个简洁的示例，目的在于执行文本分类任务：</span></p>
       <blockquote>
@@ -1868,11 +1868,82 @@ ol > li::marker {
         <p><span>我觉得食物还可以。</span></p>
         <p><span>情绪：</span></p>
       </blockquote>
-      <blockquote><p><span>LLM：中性</span></p></blockquote>
-      <p><span>在以上示例中，我们设定了指令“将文本分类为中性、否定或肯定”，并提供了输入数据“我认为食物还可以”，随后以“情绪：”作为输出的引导词。这个基础示例没有包含上下文，但上下文信息可以作为提示的一部分，通过提供额外的示例来帮助大语言模型更准确地把握任务要求，并引导出预期的输出格式。</span></p>
-      <p><strong><span>请注意，提示词的设计应根据具体任务需求而定，上述要素并非在所有情况下都必需。</span></strong></p>
+      <blockquote><p><span>LLM：中性</span></p></blockquote></br>
+      <p><span>在以上示例中，我们设定了指令“将文本分类为中性、否定或肯定”，并提供了输入数据“我认为食物还可以”，随后以“情绪：”作为输出的引导词。这个基础示例没有包含上下文，但上下文信息可以作为提示的一部分，通过提供额外的示例来帮助大语言模型更准确地把握任务要求，并引导出预期的输出格式。</span></p></br>
+      <p><strong><span>请注意，提示词的设计应根据具体任务需求而定，上述要素并非在所有情况下都必需。</span></strong></p></br>
 
       <h2 id='提示设计技巧'><span>提示设计技巧</span></h2>
+      <p><strong><span>一、迭代优化</span></strong></p>
+      <p><span>在设计提示时，请记住这是一个需要反复尝试的过程，通常需要进行多次实验才能获得最佳结果。可以从简单的提示开始，随着目标的明确，不断添加更多元素和上下文信息。在此过程中，进行提示的版本控制非常重要。</span></p>
+      <p>&nbsp;</p>
+      <p><span>如果我们面临一个包含许多子任务的大任务，可以尝试将其分解为更简单的部分，并随着结果的优化逐步构建。这有助于避免在提示设计初期加入过多复杂性。</span></p>
+      <p>&nbsp;</p>
+      <p><strong><span>二、指令任务</span></strong></p>
+      <p><span>我们可以通过命令指示大语言模型执行各种简单任务，如</span><strong><span>“写入”、“分类”、“总结”、“翻译”和“排序”</span></strong><span>，以此设计出有效的提示。</span></p>
+      <p>&nbsp;</p>
+      <p><span>请记住，需要进行大量实验以确定哪种方法最有效。尝试使用不同的关键字、上下文和数据，以找到最适合您特定用例和任务的方法。通常情况下，任务的上下文越具体且与模型的目标越相关，效果越好。</span></p>
+      <p>&nbsp;</p>
+      <p><span>建议将指令放在提示的</span><strong><span>开头</span></strong><span>，并使用“###”或“---”等清晰的分隔符来区分指令和上下文。</span></p>
+      <p><span>例如：</span></p>
+      <blockquote>
+        <p><span>Prompt：</span></p>
+        <p><span>### 指令 ###</span></p>
+        <p><span>将以下文本翻译成法语：</span></p>
+        <p><span>文本：“hello！”</span></p>
+      </blockquote>
+      <blockquote>
+        <p><span>LLM：Bonjour !</span></p>
+      </blockquote>
+      <p>&nbsp;</p>
+      <p><strong><span>三、详细具体化</span></strong></p>
+      <p><span>我们需要将</span><strong><span>指令和任务具体化</span></strong><span>，以便大语言模型能够更有效地执行。提示越具体和详细，结果通常会越好，尤其当我们期望某种结果或生成特定样式时。</span></p>
+      <p>&nbsp;</p>
+      <p><span>这并不依赖于特定的词汇或关键字，而是取决于良好的格式和描述性提示。实际上，在提示中提供示例非常有效，有助于以特定格式获得所需的输出。</span></p>
+      <p>&nbsp;</p>
+      <p><span>设计提示时，还应考虑提示的长度，提示应具体和详细，但不应包含过多不必要的细节，这些细节应与任务相关，并有助于完成任务。</span></p>
+      <p>&nbsp;</p>
+      <p><span>例如，我们可以尝试一个简单的提示，从一段文本中提取特定信息。</span></p>
+      <blockquote>
+        <p><span>Prompt：</span></p>
+        <p><span>提取以下文本中的编程语言。</span></p>
+        <p><span>所需格式： 编程语言：&lt;逗号分隔的编程语言列表&gt;</span></p>
+        <p><span>输入：“在现代软件开发中，Python被广泛用于数据分析和人工智能应用，而JavaScript仍然是前端开发的首选语言。Java在企业级应用开发中扮演着重要角色，同时，Go语言因其高效和并发性而受到后端开发人员的欢迎。Ruby因其简洁和优雅的语法也在某些Web开发项目中被使用。”</span></p>
+      </blockquote>
+      <blockquote>
+        <p><span>LLM：</span><span>编程语言：Python, JavaScript, Java, Go, Ruby</span></p>
+      </blockquote>
+      <p>&nbsp;</p>
+      <p><strong><span>四、避免模糊</span></strong></p>
+      <p><span>在追求提示的详细与格式优化时，很容易陷入想要过于聪明的提示陷阱，从而可能创建不精确的描述。通常，</span><strong><span>具体而直接</span></strong><span>为上策，正如有效沟通所强调的：越直接，信息传递越高效。</span></p>
+      <blockquote>
+        <p><span>Prompt：解释数据科学的基本原理。保持简短，仅用几句，避免过多细节。</span></p>
+      </blockquote>
+      <p>&nbsp;</p>
+      <p><span>上述提示中不清楚要使用多少句话和什么样的风格。尽管如此，我们仍可能得到不错的回应；然而，更佳的做法是给出具体、简洁且直接的指示。例如：</span></p>
+      <blockquote>
+        <p><span>Prompt：用 2-3 句话解释数据科学的概念。</span></p>
+      </blockquote>
+      <p>&nbsp;</p>
+      <p><strong><span>五、避免出现“不要做XXX”</span></strong></p>
+      <p><span>设计提示时，宜</span><strong><span>聚焦正面指导而非负面禁止</span></strong><span>。这有助于更具体化，并集中于促使模型生成优质响应的要素。</span></p>
+      <p>&nbsp;</p>
+      <p><span>以下是一个餐厅推荐聊天机器人的示例，因为我写的指令——关注于不要做什么，而失败了。</span></p>
+      <blockquote>
+        <p><span>Prompt：</span><span>以下是为客户推荐餐厅的代理程序。不要询问客户的偏好，不要询问个人信息。 </span></p>
+        <p><span>顾客：请根据我的口味推荐一家餐厅。 </span><span>代理：</span></p>
+      </blockquote>
+      <blockquote>
+        <p><span>LLM：</span><span>代理：当然可以。考虑到您的口味，您倾向于哪种类型的美食？比如，您喜欢中式、西式、地中海或是亚洲融合菜系？</span></p>
+      </blockquote>
+      <p>&nbsp;</p>
+      <p><span>以下是更好的提示：</span></p>
+      <blockquote>
+        <p><span>Prompt：</span><span>以下是为客户推荐餐厅的代理程序。代理负责从广受好评的餐厅中推荐餐厅。它应该避免询问用户的偏好并避免询问个人信息。如果代理没有餐厅推荐，它应该回答“抱歉，今天找不到餐厅推荐。”</span><span>顾客：请根据我的口味推荐一家餐厅。</span></p>
+        <p><span>代理：</span></p>
+      </blockquote>
+      <blockquote>
+        <p><span>LLM：</span><span>代理：抱歉，我没有关于您口味的任何信息。不过，这是目前全球热门的餐厅清单：[餐厅清单]。希望您能找到喜欢的餐厅！</span></p>
+      </blockquote>
     </div>
   </div>
 </body>
