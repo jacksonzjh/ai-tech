@@ -27,7 +27,7 @@ export default {
     fetchPost(id) {
       const posts = [
         { id: 1, title: 'Typra - Markdown编辑器指南', content: 'Content of the first post.' },
-        { id: 2, title: 'AI技术前沿：从零到精通提示工程(Prompt Engineering)', content: 'Content of the second post.' }
+        { id: 2, title: 'AI必学：从零到精通提示工程(Prompt Engineering)', content: 'Content of the second post.' }
       ];
       this.post = posts.find(post => post.id === parseInt(id));
     },

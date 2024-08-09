@@ -16,7 +16,7 @@ export default {
     return {
       posts: [
         { id: 1, title: 'Typra - Markdown编辑器指南' },
-        { id: 2, title: 'AI技术前沿：从零到精通提示工程(Prompt Engineering)' }
+        { id: 2, title: 'AI必学：从零到精通提示工程(Prompt Engineering)' }
       ]
     }
   }
