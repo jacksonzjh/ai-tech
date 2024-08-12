@@ -2248,7 +2248,7 @@ ol > li::marker {
       <p>&nbsp;</p>
       <p><span>我们可以看到在提供推理步骤时得到了完美的结果。</span></p>
       <p>&nbsp;</p>
-      <p><span>思维链的主要思想是通过向大语言模型展示一些少量的样例，在样例中解释推理过程，大语言模型在回答提示时也会显示推理过程。这种推理的解释往往会引导出更准确的结果。</span></p>
+      <p><span>思维链的主要思想是通过向大语言模型展示一些少量的样例，在样例中解释推理过程，大语言模型在回答提示时也会显示推理过程。这种推理的解释往往会引导出更准确的结果。</span></p></br>
       <p><div class="image-container">
         <img src="https://jacksonzjh.github.io/ai-tech/Ai-TechArticles/PromptEngineeringGuide/images/p3.png" alt="Image Description"></br>
       </div></p>
@@ -2307,9 +2307,9 @@ ol > li::marker {
       <blockquote>
         <p><span>LLM： </span></p>
         <p><span>根据您的需求，以下是我们的推荐：</span></p>
-        <p><span>\1. Apple iPhone 13, 128GB, Blue - 适合注重性能和设计的用户。</span></p>
-        <p><span>\2. Samsung Galaxy S21, 256GB, Phantom Black - 提供更大的存储空间和卓越的相机功能。</span></p>
-        <p><span>\3. Google Pixel 6, 128GB, Sorta Seafoam - 最佳性价比，具备最新的安卓功能和优质拍摄体验。</span></p>
+        <p><span>1. Apple iPhone 13, 128GB, Blue - 适合注重性能和设计的用户。</span></p>
+        <p><span>2. Samsung Galaxy S21, 256GB, Phantom Black - 提供更大的存储空间和卓越的相机功能。</span></p>
+        <p><span>3. Google Pixel 6, 128GB, Sorta Seafoam - 最佳性价比，具备最新的安卓功能和优质拍摄体验。</span></p>
       </blockquote>
       <p>&nbsp;</p>
       <p><span>如我们所见，简化并创建提示链是一种有效的提示方法，其中响应需要经过多个操作或转换。作为练习，您可以自由设计一个提示，它会在将响应作为最终推荐发送给用户之前，移除产品信息中的冗余细节（例如，“256GB”）。</span>
@@ -2340,9 +2340,9 @@ ol > li::marker {
       <p>&nbsp;</p>
       <p><span>将 ToT 框架的主要概念概括成了一段简短的提示词，指导 LLM 在一次提示中对中间思维做出评估。ToT 提示词的例子如下：</span></p>
       <blockquote>
-        <p><span>Prompt：</span>
-          <span>假设三位不同的设计师来改进这个界面。 </span>
-        </p>
+        <p><span>Prompt：</span></p>
+        <p><span>假设三位不同的设计师来改进这个界面。 </span><p></p>
+        
         <p><span>所有设计师都写下他们设计这个界面的第一个步骤，然后与大家分享。 </span></p>
         <p><span>然后，所有设计师都写下他们接下来的设计步骤并分享。 </span></p>
         <p><span>以此类推，直到所有设计师完成他们的设计过程。 </span></p>
@@ -2350,9 +2350,9 @@ ol > li::marker {
         <p><span>请问...</span></p>
       </blockquote>
       <blockquote>
-        <p><span>LLM：</span>
-          <span>专家1的第一步：</span>
-        </p>
+        <p><span>LLM：</span></p>
+        <p><span>专家1的第一步：</span></p>
+        
         <p><span>识别并列出问题中涉及的所有变量和因素。在制定任何策略之前，理解问题的范围至关重要。</span></p>
         <p>&nbsp;</p>
         <p><span>专家2的第一步：</span></p>
