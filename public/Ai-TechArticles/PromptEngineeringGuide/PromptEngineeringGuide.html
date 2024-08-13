@@ -1844,6 +1844,9 @@ ol > li::marker {
 
       <h2 id='提示基础'><span>提示基础</span></h2>
       <p><span>我们可以通过编写简单的提示词（Prompt）获得大语言模型输出结果，但结果的质量与提供的信息数量和完善度有关。</span></p></br>
+      <div class="image-container">
+        <img src="https://jacksonzjh.github.io/ai-tech/Ai-TechArticles/PromptEngineeringGuide/images/p3.png" alt="Image Description 3"></br>
+      </div>
       <p><strong><span>一个简单的示例：</span></strong></p>
       <blockquote><p><span>Prompt：天空是</span></p></blockquote>
       <blockquote><p><span>LLM：蓝色的，白云</span></p></blockquote></br>
@@ -1933,7 +1936,8 @@ ol > li::marker {
         <p><span>顾客：请根据我的口味推荐一家餐厅。 </span><span>代理：</span></p>
       </blockquote>
       <blockquote>
-        <p><span>LLM：</span><span>代理：当然可以。考虑到您的口味，您倾向于哪种类型的美食？比如，您喜欢中式、西式、地中海或是亚洲融合菜系？</span></p>
+        <p><span>LLM：</span></p>
+        <p><span>代理：当然可以。考虑到您的口味，您倾向于哪种类型的美食？比如，您喜欢中式、西式、地中海或是亚洲融合菜系？</span></p>
       </blockquote>
       <p>&nbsp;</p>
       <p><span>以下是更好的提示：</span></p>
@@ -1942,8 +1946,9 @@ ol > li::marker {
         <p><span>代理：</span></p>
       </blockquote>
       <blockquote>
-        <p><span>LLM：</span><span>代理：抱歉，我没有关于您口味的任何信息。不过，这是目前全球热门的餐厅清单：[餐厅清单]。希望您能找到喜欢的餐厅！</span></p>
-      </blockquote>
+        <p><span>LLM：</span></p>
+        <p><span>代理：抱歉，我没有关于您口味的任何信息。不过，这是目前全球热门的餐厅清单：[餐厅清单]。希望您能找到喜欢的餐厅！</span></p>
+      </blockquote></br>
 
       <h2 id='提示词示例'><span>提示词示例</span></h2>
       <ul>
@@ -2005,13 +2010,12 @@ ol > li::marker {
       <p><span>例如，可以通过以下示例创建一个对话系统，该系统能够根据问题提供技术性和科学的回答。通过明确的指令告诉模型应如何表现，这种应用场景通常被称为</span><strong><span>角色提示（Role
             Prompting）</span></strong><span>。</span></p>
       <blockquote>
-        <p><span>Prompt：</span>
-          <span>以下是与AI医学助手的对话，语气应该专业、严谨。</span>
-          <span>人类：你好，你是谁？</span>
-          <span>AI：您好！我是AI医学助手，请问有什么可以帮您？</span>
-          <span>人类：你能告诉我一下什么是免疫系统吗？</span>
-          <span>AI：</span>
-        </p>
+        <p><span>Prompt：</span></p>
+        <p><span>以下是与AI医学助手的对话，语气应该专业、严谨。</span></p>
+        <p><span>人类：你好，你是谁？</span></p>
+        <p><span>AI：您好！我是AI医学助手，请问有什么可以帮您？</span></p>
+        <p><span>人类：你能告诉我一下什么是免疫系统吗？</span></p>
+        <p><span>AI：</span></p>
       </blockquote>
       <blockquote>
         <p><span>LLM：</span></p>
@@ -2022,13 +2026,12 @@ ol > li::marker {
       <p>&nbsp;</p>
       <p><span>我们的 AI 医学助理给出的回答非常专业对吧？ 下面，我们让它给出更易于理解的答案。</span></p>
       <blockquote>
-        <p><span>Prompt：</span>
-          <span>以下是与AI医学助手的对话，请给出易于理解的答案，最好是学生都能看懂的那种。</span>
-          <span>人类：你好，你是谁？</span>
-          <span>AI：您好！我是AI医学助手，请问有什么可以帮您？</span>
-          <span>人类：你能告诉我一下什么是免疫系统吗？</span>
-          <span>AI：</span>
-        </p>
+        <p><span>Prompt：</span></p>
+          <p><span>以下是与AI医学助手的对话，请给出易于理解的答案，最好是学生都能看懂的那种。</span></p>
+          <p><span>人类：你好，你是谁？</span></p>
+          <p><span>AI：您好！我是AI医学助手，请问有什么可以帮您？</span></p>
+          <p><span>人类：你能告诉我一下什么是免疫系统吗？</span></p>
+          <p><span>AI：</span></p>
       </blockquote>
       <blockquote>
         <p><span>LLM：</span></p>
@@ -2048,9 +2051,8 @@ ol > li::marker {
         <p><span>/* 询问用户的姓名并说“Hello” */</span></p>
       </blockquote>
       <blockquote>
-        <p><span>LLM：</span>
-          <span>let name = prompt(&quot;What is your name?&quot;);</span>
-        </p>
+        <p><span>LLM：</span></p>
+        <p><span>let name = prompt(&quot;What is your name?&quot;);</span></p>
         <p><span>console.log(</span><code>Hello, ${name}!</code><span>);</span></p>
       </blockquote>
       <p>&nbsp;</p>
@@ -2063,9 +2065,8 @@ ol > li::marker {
         <p><span>创建一个 MySQL 查询，获取所有属于“人力资源部”的员工 &quot;&quot;&quot;</span></p>
       </blockquote>
       <blockquote>
-        <p><span>LLM：</span>
-          <span>SELECT StudentId, StudentName </span>
-        </p>
+        <p><span>LLM：</span></p>
+        <p><span>SELECT StudentId, StudentName </span></p>
         <p><span>FROM students </span></p>
         <p><span>WHERE DepartmentId IN (SELECT DepartmentId FROM departments </span></p>
         <p><span> WHERE DepartmentName = &#39;HR&#39;);</span></p>
@@ -2113,7 +2114,9 @@ ol > li::marker {
       <p><span>这种技术利用 LLM 的强大预训练知识，通过最小化的示例输入，实现对复杂任务的快速适应和高效处理。</span></p>
       <p>&nbsp;</p>
       <p><span>零样本提示的定义是直接向大语言模型提出任务，但是不提供如何执行的方法或者步骤。模型必须使用其预训练的知识来生成答案。</span></p>
-      <p>&nbsp;</p>
+      <div class="image-container">
+        <img src="https://jacksonzjh.github.io/ai-tech/Ai-TechArticles/PromptEngineeringGuide/images/p4.png" alt="Image Description">
+      </div>
       <p><span>一个简单的零样本提示示例：</span></p>
       <blockquote>
         <p><span>Prompt：法国的首都是什么？</span></p>
@@ -2163,7 +2166,9 @@ ol > li::marker {
       <p><strong><span>② 少样本提示（Few-shot Prompting）</span></strong></p>
       <p><span>少量样本提示同样只需要向 LLM 发送单个 Prompt。但与零样本提示的关键区别在于：</span><strong><span>少量示例被添加到了 Prompt 中，这些示例可以帮助 LLM
             理解并完成任务。</span></strong></p>
-      <p>&nbsp;</p>
+      <p><div class="image-container">
+        <img src="https://jacksonzjh.github.io/ai-tech/Ai-TechArticles/PromptEngineeringGuide/images/p5.png" alt="Image Description">
+      </div></p>
       <p><span>我们以上文中，提取商品的 Prompt 为基础，然后加上示例：</span></p>
       <blockquote>
         <p><span>Prompt：</span></p>
@@ -2222,7 +2227,9 @@ ol > li::marker {
       </p>
       <p>&nbsp;</p>
       <p><span>CoT的核心在于将大问题拆分成小问题，再逐步细化，直到每个问题都能简单明了地解决，从而更清晰地理解问题并找到最佳解决方案。</span></p>
-      <p>&nbsp;</p>
+      <p><div class="image-container">
+        <img src="https://jacksonzjh.github.io/ai-tech/Ai-TechArticles/PromptEngineeringGuide/images/p6.png" alt="Image Description">
+      </div></p>
       <p>
         <span>可以将CoT比作拼图，每块拼图代表问题的一个方面，只有将它们拼合起来，才能得出完整答案。例如，在学习新知识时，CoT帮助我们建立知识点之间的关联，更好地理解和记忆；在解决问题时，它让我们将问题分解为多个子问题，逐步解决，最终形成完整的解决方案。</span>
       </p>
@@ -2249,9 +2256,6 @@ ol > li::marker {
       <p><span>我们可以看到在提供推理步骤时得到了完美的结果。</span></p>
       <p>&nbsp;</p>
       <p><span>思维链的主要思想是通过向大语言模型展示一些少量的样例，在样例中解释推理过程，大语言模型在回答提示时也会显示推理过程。这种推理的解释往往会引导出更准确的结果。</span></p></br>
-      <p><div class="image-container">
-        <img src="https://jacksonzjh.github.io/ai-tech/Ai-TechArticles/PromptEngineeringGuide/images/p3.png" alt="Image Description"></br>
-      </div></p>
       <p><strong><span>④ 链式提示（Prompt Chaining）</span></strong></p>
       <p><span>链式提示能够处理非常复杂的任务。LLM 可能无法通过单个详细提示完成这些任务，而链式提示则通过一系列提示链逐步生成并处理回应，直至获得期望的结果。</span></p>
       <p>&nbsp;</p>
@@ -2335,9 +2339,8 @@ ol > li::marker {
       </ol>
       <p>&nbsp;</p>
       <p><div class="image-container">
-        <img src="https://jacksonzjh.github.io/ai-tech/Ai-TechArticles/PromptEngineeringGuide/images/p4.png" alt="Image Description"></br>
+        <img src="https://jacksonzjh.github.io/ai-tech/Ai-TechArticles/PromptEngineeringGuide/images/p7.png" alt="Image Description">
       </div></p>
-      <p>&nbsp;</p>
       <p><span>将 ToT 框架的主要概念概括成了一段简短的提示词，指导 LLM 在一次提示中对中间思维做出评估。ToT 提示词的例子如下：</span></p>
       <blockquote>
         <p><span>Prompt：</span></p>
@@ -2387,7 +2390,10 @@ ol > li::marker {
       <p><span>随着AI技术的不断发展，提示工程（Prompt Engineering）已经成为解锁大语言模型潜力的关键技能。通过合理设计和优化提示词，开发者能够引导模型生成更加准确、有用的结果，从而提升应用的性能和可靠性。</span>
       </p>
       <p>&nbsp;</p>
-      <p><span>无论是在自然语言处理、代码生成还是复杂任务分解中，提示工程都展现出其强大的能力。掌握提示工程的技巧，将为我们在AI技术领域开辟更多的可能性。</span></p>
+      <p><span>无论是在自然语言处理、代码生成还是复杂任务分解中，提示工程都展现出其强大的能力。掌握提示工程的技巧，将为我们在AI技术领域开辟更多的可能性。</span></p></br>
+      <p><div class="image-container">
+        <img src="https://jacksonzjh.github.io/ai-tech/Ai-TechArticles/PromptEngineeringGuide/images/尾图.png" alt="Image Description">
+      </div></p>
       </div>
       </div>
     </div>
