@@ -1936,7 +1936,8 @@ ol > li::marker {
         <p><span>顾客：请根据我的口味推荐一家餐厅。 </span><span>代理：</span></p>
       </blockquote>
       <blockquote>
-        <p><span>LLM：</span><span>代理：当然可以。考虑到您的口味，您倾向于哪种类型的美食？比如，您喜欢中式、西式、地中海或是亚洲融合菜系？</span></p>
+        <p><span>LLM：</span></p>
+        <p><span>代理：当然可以。考虑到您的口味，您倾向于哪种类型的美食？比如，您喜欢中式、西式、地中海或是亚洲融合菜系？</span></p>
       </blockquote>
       <p>&nbsp;</p>
       <p><span>以下是更好的提示：</span></p>
@@ -1945,8 +1946,9 @@ ol > li::marker {
         <p><span>代理：</span></p>
       </blockquote>
       <blockquote>
-        <p><span>LLM：</span><span>代理：抱歉，我没有关于您口味的任何信息。不过，这是目前全球热门的餐厅清单：[餐厅清单]。希望您能找到喜欢的餐厅！</span></p>
-      </blockquote>
+        <p><span>LLM：</span></p>
+        <p><span>代理：抱歉，我没有关于您口味的任何信息。不过，这是目前全球热门的餐厅清单：[餐厅清单]。希望您能找到喜欢的餐厅！</span></p>
+      </blockquote></br>
 
       <h2 id='提示词示例'><span>提示词示例</span></h2>
       <ul>
@@ -2008,13 +2010,12 @@ ol > li::marker {
       <p><span>例如，可以通过以下示例创建一个对话系统，该系统能够根据问题提供技术性和科学的回答。通过明确的指令告诉模型应如何表现，这种应用场景通常被称为</span><strong><span>角色提示（Role
             Prompting）</span></strong><span>。</span></p>
       <blockquote>
-        <p><span>Prompt：</span>
-          <span>以下是与AI医学助手的对话，语气应该专业、严谨。</span>
-          <span>人类：你好，你是谁？</span>
-          <span>AI：您好！我是AI医学助手，请问有什么可以帮您？</span>
-          <span>人类：你能告诉我一下什么是免疫系统吗？</span>
-          <span>AI：</span>
-        </p>
+        <p><span>Prompt：</span></p>
+        <p><span>以下是与AI医学助手的对话，语气应该专业、严谨。</span></p>
+        <p><span>人类：你好，你是谁？</span></p>
+        <p><span>AI：您好！我是AI医学助手，请问有什么可以帮您？</span></p>
+        <p><span>人类：你能告诉我一下什么是免疫系统吗？</span></p>
+        <p><span>AI：</span></p>
       </blockquote>
       <blockquote>
         <p><span>LLM：</span></p>
@@ -2025,13 +2026,12 @@ ol > li::marker {
       <p>&nbsp;</p>
       <p><span>我们的 AI 医学助理给出的回答非常专业对吧？ 下面，我们让它给出更易于理解的答案。</span></p>
       <blockquote>
-        <p><span>Prompt：</span>
-          <span>以下是与AI医学助手的对话，请给出易于理解的答案，最好是学生都能看懂的那种。</span>
-          <span>人类：你好，你是谁？</span>
-          <span>AI：您好！我是AI医学助手，请问有什么可以帮您？</span>
-          <span>人类：你能告诉我一下什么是免疫系统吗？</span>
-          <span>AI：</span>
-        </p>
+        <p><span>Prompt：</span></p>
+          <p><span>以下是与AI医学助手的对话，请给出易于理解的答案，最好是学生都能看懂的那种。</span></p>
+          <p><span>人类：你好，你是谁？</span></p>
+          <p><span>AI：您好！我是AI医学助手，请问有什么可以帮您？</span></p>
+          <p><span>人类：你能告诉我一下什么是免疫系统吗？</span></p>
+          <p><span>AI：</span></p>
       </blockquote>
       <blockquote>
         <p><span>LLM：</span></p>
@@ -2051,9 +2051,8 @@ ol > li::marker {
         <p><span>/* 询问用户的姓名并说“Hello” */</span></p>
       </blockquote>
       <blockquote>
-        <p><span>LLM：</span>
-          <span>let name = prompt(&quot;What is your name?&quot;);</span>
-        </p>
+        <p><span>LLM：</span></p>
+        <p><span>let name = prompt(&quot;What is your name?&quot;);</span></p>
         <p><span>console.log(</span><code>Hello, ${name}!</code><span>);</span></p>
       </blockquote>
       <p>&nbsp;</p>
@@ -2066,9 +2065,8 @@ ol > li::marker {
         <p><span>创建一个 MySQL 查询，获取所有属于“人力资源部”的员工 &quot;&quot;&quot;</span></p>
       </blockquote>
       <blockquote>
-        <p><span>LLM：</span>
-          <span>SELECT StudentId, StudentName </span>
-        </p>
+        <p><span>LLM：</span></p>
+        <p><span>SELECT StudentId, StudentName </span></p>
         <p><span>FROM students </span></p>
         <p><span>WHERE DepartmentId IN (SELECT DepartmentId FROM departments </span></p>
         <p><span> WHERE DepartmentName = &#39;HR&#39;);</span></p>
