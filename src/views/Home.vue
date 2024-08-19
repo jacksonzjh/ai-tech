@@ -30,6 +30,7 @@ body {
 .content-container {
   max-width: 900px; /* 与导航栏保持一致 */
   background-color: white;
+  margin-top: -5px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   padding: 40px; /* 控制白板内边距 */
   border-radius: 8px; /* 圆角效果 */

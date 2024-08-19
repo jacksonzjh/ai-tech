@@ -1,30 +1,34 @@
 <template>
-  <div v-show="showButton" class="back-to-top" @click="scrollToTop">
-    ⬆️
+  <div class="back-to-top" v-if="isVisible" @click="scrollToTop">
+    <img src="@/assets/back-to-top.svg" alt="Back to Top" class="back-to-top-icon" />
   </div>
 </template>
 
 <script>
 export default {
+  name: 'BackToTopButton',
   data() {
     return {
-      showButton: false,
+      isVisible: false
     };
   },
   mounted() {
-    window.addEventListener('scroll', this.handleScroll);
+    window.addEventListener('scroll', this.toggleVisibility);
   },
   beforeDestroy() {
-    window.removeEventListener('scroll', this.handleScroll);
+    window.removeEventListener('scroll', this.toggleVisibility);
   },
   methods: {
-    handleScroll() {
-      this.showButton = window.scrollY > 200;
+    toggleVisibility() {
+      this.isVisible = window.pageYOffset > 300;
     },
     scrollToTop() {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    },
-  },
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    }
+  }
 };
 </script>
 
@@ -33,15 +37,20 @@ export default {
   position: fixed;
   bottom: 20px;
   right: 20px;
-  background-color: #ffffff;
+  background-color: white;
   border-radius: 50%;
-  width: 50px;
-  height: 50px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  z-index: 1000;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 24px;
-  cursor: pointer;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  width: 40px;
+  height: 40px;
+}
+
+.back-to-top-icon {
+  width: 25px; /* 根据需要调整大小 */
+  height: 25px;
 }
 </style>

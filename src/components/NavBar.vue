@@ -57,8 +57,4 @@ body {
   color: #8fdeff;
   text-decoration: none;
 }
-
-.navbar-link.active {
-  color: #8fdeff;
-}
 </style>
