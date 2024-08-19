@@ -36,9 +36,9 @@ src
 ## 技术栈
 
 * 前端：Vue
-* AI Agent：Dify
+* LLMOps Middleware：Dify
 * RAG：PostgreSQL
-* LLM：Qwen2:7b
+* LLM：Qwen2-7B-Instruct
 * Agent Tools：Python、Flask
 
 ## 许可证
