@@ -41,37 +41,15 @@ export default {
 <style scoped>
 .site-list-container {
   background-color: #f8f8f8;
-  padding: 40px 0;
-  margin-top: 17px;
+  padding: 75px 0;
 }
 
 .centered-content {
-  display: flex;
-  justify-content: center;
-  padding-top: 20px;
-  background-color: #f8f8f8; /* 调整为白色背景 */
-  padding-bottom: 100px; /* 确保footer不被覆盖 */
-}
-
-.centered-content .el-table {
-  width: 80%;
-  max-width: 900px;
-}
-
-.router-link {
-  color: #212323;
-  text-decoration: none; /* 移除链接的默认下划线 */
-}
-
-.router-link:hover {
-  color: #8fdeff; /* 鼠标悬停时的颜色变化 */
-  text-decoration: none; /* 移除链接的下划线 */
-}
-
-.router-link:focus,
-.router-link:active {
-  color: #8fdeff;
-  text-decoration: none; /* 移除链接的下划线 */
-  outline: none; /* 移除点击后的默认边框 */
+  max-width: 900px; /* 与导航栏一致的最大宽度 */
+  margin: 0 auto;
+  background-color: white;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 7px;
+  padding: 20px;
 }
 </style>

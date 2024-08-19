@@ -42,10 +42,11 @@ export default {
 }
 
 .content-container {
-  max-width: 820px;
+  max-width: 900px; /* 与导航栏一致的最大宽度 */
   margin: 0 auto;
   background-color: white;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   border-radius: 7px;
+  padding: 20px;
 }
 </style>

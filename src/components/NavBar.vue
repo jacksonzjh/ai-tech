@@ -20,9 +20,10 @@ body {
 }
 
 .navbar-container {
-  max-width: 900px;
+  width: 100%; /* 设置宽度为100% */
+  max-width: 900px; /* 设置固定的最大宽度，确保在大屏幕上保持一致 */
   margin: 0 auto;
-  padding: 10px 20px; /* 增加上下间距 */
+  padding: 0 20px; /* 增加上下间距 */
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -36,6 +37,7 @@ body {
   top: 0;
   left: 0;
   z-index: 1000;
+  height: 60px; /* 设置固定高度，防止内容导致导航栏高度变化 */
 }
 
 .navbar-title {
@@ -44,6 +46,7 @@ body {
   color: black;
   text-decoration: none;
   margin-left: 20px;
+  line-height: 60px; /* 设置与导航栏一致的行高，确保垂直居中 */
 }
 
 .navbar-link {
@@ -51,6 +54,7 @@ body {
   color: black;
   text-decoration: none;
   margin-right: 20px; /* 增加按钮间距 */
+  line-height: 60px; /* 设置与导航栏一致的行高，确保垂直居中 */
 }
 
 .navbar-link:hover {

@@ -1,5 +1,5 @@
 <template>
-  <div class="back-to-top" v-if="isVisible" @click="scrollToTop">
+  <div class="back-to-top" v-if="isVisible" @click="scrollToTop" @mouseover="isHovered = true" @mouseleave="isHovered = false">
     <img src="@/assets/back-to-top.svg" alt="Back to Top" class="back-to-top-icon" />
   </div>
 </template>
@@ -52,5 +52,9 @@ export default {
 .back-to-top-icon {
   width: 25px; /* 根据需要调整大小 */
   height: 25px;
+}
+
+.back-to-top:hover {
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4); /* 鼠标悬停时的阴影效果 */
 }
 </style>
