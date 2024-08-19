@@ -28,8 +28,8 @@ export default {
   data() {
     return {
       posts: [
-        { id: 1, title: 'Typra - Markdown编辑器指南', cover: `${process.env.BASE_URL}Ai-TechArticles/typra.png` },
-        { id: 2, title: 'AI必学：从零到精通提示工程(Prompt Engineering)', cover: `${process.env.BASE_URL}Ai-TechArticles/PromptEngineeringGuide/images/封面图.png` }
+        { id: 1, title: 'Typra - Markdown编辑器指南' },
+        { id: 2, title: 'AI技术前沿：从零到精通提示工程(Prompt Engineering)' }
       ]
     };
   }
