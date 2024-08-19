@@ -16,15 +16,18 @@
 src
 ├── App.vue
 ├── assets
-│   ├── logo.png
+│   ├── ai-tech.png
+│   ├── back-to-top.svg
 │   └── styles
 │       └── main.css
 ├── components
+│   ├── BackToTopButton.vue
 │   └── NavBar.vue
 ├── main.js
 ├── router
 │   └── index.js
 └── views
+    ├── AboutMe.vue
     ├── Home.vue
     ├── SiteDetail.vue
     └── SiteList.vue
