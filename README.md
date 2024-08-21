@@ -8,7 +8,7 @@
 
 ## 项目特色
 
-本项目由AI大语言模型【独立完成】，本人只负责整理编码、调试、发布 : )
+本项目由AI辅助完成，本人负责整理编码、调试、发布 : )
 
 ## 当前项目进度
 
@@ -16,12 +16,9 @@
 src
 ├── App.vue
 ├── assets
-│   ├── ai-tech.png
-│   ├── back-to-top.svg
-│   └── styles
-│       └── main.css
 ├── components
 │   ├── BackToTopButton.vue
+│   ├── ChatbotButton.vue
 │   └── NavBar.vue
 ├── main.js
 ├── router
@@ -36,10 +33,9 @@ src
 ## 技术栈
 
 * 前端：Vue
-* LLMOps Middleware：Dify
-* RAG：PostgreSQL
+* LLMOps：Dify
 * LLM：Qwen2-7B-Instruct
-* Agent Tools：Python、Flask
+* Agent Tools：Flask
 
 ## 许可证
 

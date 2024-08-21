@@ -33,7 +33,7 @@ export default {
   text-align: center;
   padding: 20px 0;
   background-color: #f8f8f8;
-  margin-top: -70px; /* 向上移动 */
+  margin-top: -60px; /* 向上移动 */
 }
 
 .footer p {
