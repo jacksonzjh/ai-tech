@@ -37,8 +37,9 @@ export default {
 
 <style scoped>
 .about-container {
-  background-color: #f8f8f8;
+  background-color: #ffffff;
   padding: 75px 0;
+  margin-left: 40px;
 }
 
 .content-container {

@@ -39,23 +39,25 @@ export default {
 </script>
 
 <style scoped>
+
 .site-list-container {
-  background-color: #f8f8f8;
+  background-color: #ffffff;
   padding: 40px 0;
   margin-top: 17px;
+  margin-left: 150px;
 }
 
 .centered-content {
   display: flex;
   justify-content: center;
   padding-top: 20px;
-  background-color: #f8f8f8; /* 调整为白色背景 */
+  background-color: #ffffff; /* 调整为白色背景 */
   padding-bottom: 100px; /* 确保footer不被覆盖 */
 }
 
 .centered-content .el-table {
   width: 80%;
-  max-width: 900px;
+  max-width: 935px;
 }
 
 .router-link {

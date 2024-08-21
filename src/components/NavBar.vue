@@ -38,6 +38,7 @@ body {
   left: 0;
   z-index: 1000;
   height: 60px; /* 设置固定高度，防止内容导致导航栏高度变化 */
+  padding-left: 120px;
 }
 
 .navbar-title {
@@ -45,7 +46,7 @@ body {
   font-weight: bold;
   color: black;
   text-decoration: none;
-  margin-left: 20px;
+  margin-left: -60px;
   line-height: 60px; /* 设置与导航栏一致的行高，确保垂直居中 */
 }
 
@@ -55,6 +56,7 @@ body {
   text-decoration: none;
   margin-right: 20px; /* 增加按钮间距 */
   line-height: 60px; /* 设置与导航栏一致的行高，确保垂直居中 */
+  padding-left: 10px; /* 增加按钮左侧间距 */
 }
 
 .navbar-link:hover {

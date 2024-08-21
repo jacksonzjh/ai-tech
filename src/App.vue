@@ -32,7 +32,7 @@ export default {
 .footer {
   text-align: center;
   padding: 20px 0;
-  background-color: #f8f8f8;
+  background-color: #ffffff;
   margin-top: -60px; /* 向上移动 */
 }
 

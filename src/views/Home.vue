@@ -20,7 +20,7 @@ body {
 }
 
 .home-container {
-  background-color: #f8f8f8;
+  background-color: #ffffff;
   padding: 75px 0; /* 控制上下间距 */
   display: flex;
   justify-content: center; /* 内容居中 */
