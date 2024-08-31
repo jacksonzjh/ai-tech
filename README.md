@@ -33,9 +33,8 @@ src
 ## 技术栈
 
 * 前端：Vue
-* LLMOps：Dify
 * LLM：Qwen2-7B-Instruct
-* Agent Tools：Flask
+* Agent：Dify、Flask
 
 ## 许可证
 
