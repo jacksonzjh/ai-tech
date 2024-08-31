@@ -1759,12 +1759,23 @@ ol > li::marker {
 
   /* 内容区域样式 */
   .typora-export-content {
-    max-width: 950px; /* 最大宽度，控制所有内容的宽度 */
-    margin: 0 auto; /* 上下外边距10px，左右自动居中 */
+    max-width: 900px; /* 最大宽度，控制所有内容的宽度 */
+    margin-top: 80px;
+    margin: 76px auto; /* 上下外边距10px，左右自动居中 */
     padding: 0 20px; /* 上下内边距为0，左右内边距为20px */
     background-color: white; /* 内容背景色 */
     border-radius: 8px; /* 圆角边框 */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* 阴影效果 */
+    transform: translateX(18px);
+  }
+
+  body {
+    background-color: #ffffff;
+  }
+
+  .smaller-title {
+    font-size: 1.5em; /* 你可以根据需要调整字体大小 */
+    text-align: center; /* 居中处理 */
   }
 
   /* 图片容器样式 */
@@ -1810,6 +1821,8 @@ ol > li::marker {
     font-family: "Microsoft YaHei", sans-serif; /* 设置微软雅黑字体 */
     color: gray; /* 设置文字颜色为灰色 */
   }
+
+
   
   
 </style>
@@ -1818,7 +1831,7 @@ ol > li::marker {
 <body class='typora-export os-windows'>
   <div class='typora-export-content'>
     <div id='write'>
-      <h1 id = 'title'><span>AI必学：从零到精通提示工程(Prompt Engineering)</span></h1></br>
+      <h1 id='title' class='smaller-title'><span>AI必学：从零到精通提示工程(Prompt Engineering)</span></h1></br>
       <p id = 'author'><span>原创作者：周锦弘</span></p>
       <p id = 'post_time'><span>@ 2024/08/04</span></p></br>
       <h2 id='引言'><span>引言</span></h2>
