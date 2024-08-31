@@ -1,6 +1,6 @@
-import Vue from 'vue'
-import App from './App.vue'
-import router from './router'
+import Vue from 'vue';
+import App from './App.vue';
+import router from './router';
 
 // 引入 Element UI 组件库
 import ElementUI from 'element-ui';
