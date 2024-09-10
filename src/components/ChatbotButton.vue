@@ -41,14 +41,16 @@
 export default {
   data() {
     return {
-      isSidebarVisible: false,
+      isSidebarVisible: false, // 控制 AI 聊天窗口的可见性
       message: "", // 聊天输入内容
       isDragging: false, // 控制拖拽
       offset: { x: 0, y: 0 }, // 拖拽偏移
       initialPosition: { top: '10%', left: '70%' }, // 初始位置
+      isTextareaFocused: false, // 输入框焦点状态，控制拖拽
     };
   },
   methods: {
+    // 切换侧边栏显示状态
     toggleSidebar() {
       this.isSidebarVisible = !this.isSidebarVisible;
       this.$nextTick(() => {
@@ -58,13 +60,16 @@ export default {
         chatbot.style.right = "70px";
       });
     },
+    // 清空输入内容
     clearMessage() {
-      this.message = ''; // 清空输入内容
+      this.message = ''; 
     },
+    // 发送消息
     sendMessage() {
       alert('发送的消息: ' + this.message);
-      this.clearMessage(); // 发送后清空输入框
+      this.clearMessage(); 
     },
+    // 展开输入框功能
     expandTextarea() {
       const textarea = document.querySelector('.limited-textarea');
       if (textarea.style.width === '500px') {
@@ -75,8 +80,9 @@ export default {
         textarea.style.height = '500px';
       }
     },
-    // 原生 JS 拖拽功能
+    // 开始拖拽事件
     startDrag(event) {
+      if (this.isTextareaFocused) return; // 如果输入框聚焦，则禁止拖拽
       const chatbot = this.$refs.chatbotSidebar;
       this.isDragging = true;
       this.offset.x = event.clientX - chatbot.offsetLeft;
@@ -84,6 +90,7 @@ export default {
       document.addEventListener('mousemove', this.drag);
       document.addEventListener('mouseup', this.stopDrag);
     },
+    // 拖拽处理
     drag(event) {
       if (!this.isDragging) return;
 
@@ -93,14 +100,23 @@ export default {
       const maxRight = window.innerWidth - chatbot.offsetWidth;
       const maxBottom = window.innerHeight - chatbot.offsetHeight;
 
-      // 边界控制
+      // 边界控制，防止窗口被拖出屏幕
       chatbot.style.left = `${Math.min(Math.max(newX, 0), maxRight)}px`;
       chatbot.style.top = `${Math.min(Math.max(newY, 0), maxBottom)}px`;
     },
+    // 停止拖拽事件
     stopDrag() {
       this.isDragging = false;
       document.removeEventListener('mousemove', this.drag);
       document.removeEventListener('mouseup', this.stopDrag);
+    },
+    // 当输入框获取焦点时禁用拖拽
+    onTextareaFocus() {
+      this.isTextareaFocused = true;
+    },
+    // 当输入框失去焦点时恢复拖拽功能
+    onTextareaBlur() {
+      this.isTextareaFocused = false;
     },
   },
 };
@@ -126,15 +142,16 @@ export default {
 /* AI聊天侧边栏窗口样式，带有边缘弧度 */
 .chatbot-sidebar {
   position: fixed;
-  width: 400px;
+  width: 420px; /* 增加宽度 */
   height: 80vh;
+  right: 50px; /* 确保窗口靠右 */
   background-color: white;
   box-shadow: -2px 0 10px rgba(0, 0, 0, 0.2);
   display: flex;
   flex-direction: column;
-  border-radius: 15px; /* 增加弧度 */
+  border-radius: 15px; /* 边缘弧度 */
   z-index: 1001;
-  cursor: grab;
+  cursor: grab; /* 可拖动光标 */
 }
 
 /* Header 样式 */
@@ -179,21 +196,22 @@ export default {
 .chat-box {
   position: absolute;
   bottom: 0;
-  width: 100%;
+  width: 400px;
   padding: 10px;
-  background-color: #f9f9f9;
-  border-bottom-left-radius: 15px; /* 保持边缘弧度 */
+  background-color: #ffffff;
+  border-bottom-left-radius: 15px;
   border-bottom-right-radius: 15px;
 }
 
 .limited-textarea {
   width: 100%;
+  max-width: 380px; /* 限制输入框的最大宽度 */
   height: 50px;
   padding: 10px;
   border-radius: 8px;
   border: 1px solid #ccc;
   font-size: 14px;
-  resize: none; /* 禁止拖动 */
+  resize: none; /* 禁止手动拖动 */
   overflow-y: auto;
   transition: width 0.3s, height 0.3s; /* 添加动画效果 */
 }
@@ -202,7 +220,7 @@ export default {
 .expand-icon {
   position: absolute;
   bottom: 10px;
-  right: 10px;
+  right: -12px;
   cursor: pointer;
   font-size: 18px;
 }
