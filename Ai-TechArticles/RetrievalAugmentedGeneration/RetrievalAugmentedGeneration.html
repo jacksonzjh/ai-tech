@@ -1838,11 +1838,9 @@ ol > li::marker {
       <p>&nbsp;</p>
       <p><span>本文将带你深入了解 RAG 的核心理念，剖析其背后的理论基础。接着，我们会结合实际操作，展示如何使用 LangChain 管理流程，并利用通义千问系列语言模型和 Weaviate
           向量数据库，打造一个简洁但功能强大的 RAG 解决方案。无论你是刚接触这个领域的初学者，还是想要进一步提升技能的专业人士，这篇文章都会为你提供实用的见解和指导。</span></p></br>
-      <p>&nbsp;</p>
       <div class="image-container">
         <img src="https://jacksonzjh.github.io/ai-tech/Ai-TechArticles/RetrievalAugmentedGeneration/images/p1.png" alt="Image Description"></br>
       </div>
-      <p>&nbsp;</p>
       <h2 id='什么是rag'><span>什么是RAG？</span></h2>
       <p><span>检索增强生成（RAG）是一种方法，旨在为大语言模型（LLM）注入来自外部知识源的额外信息。这使得 LLM
           在生成答案时，不仅更加精准，还能更好地契合上下文。同时，它有效降低了生成误导性信息的风险，让语言模型的回答更加可靠。</span></p>
@@ -2066,11 +2064,9 @@ ol > li::marker {
   </ul>
   <p>&nbsp;</p>
   <p><strong><span>下面是 RAG 工作流程：</span></strong></p></br>
-  <p>&nbsp;</p>
   <div class="image-container">
     <img src="https://jacksonzjh.github.io/ai-tech/Ai-TechArticles/RetrievalAugmentedGeneration/images/p2.png" alt="Image Description"></br>
   </div>
-  <p>&nbsp;</p>
   <p><strong><span>检索增强生成管道（RAG Pipline / 工作流程）</span></strong></p>
   <ol start=''>
     <li>
@@ -2096,11 +2092,9 @@ ol > li::marker {
   <p>
     <span>首先，组织的文档通过嵌入模型转换为嵌入，并存储在向量数据库中。当查询发送到AI语言模型时，查询也被转换为向量嵌入，并通过向量数据库进行相似性搜索，以找到最相似的对象。通过这种方式，基于LLM的应用程序不会出现“幻觉”，因为它已被引导提供基于定制数据的响应。</span>
   </p></br>
-  <p>&nbsp;</p>
   <div class="image-container">
     <img src="https://jacksonzjh.github.io/ai-tech/Ai-TechArticles/RetrievalAugmentedGeneration/images/p3.png" alt="Image Description"></br>
   </div>
-  <p>&nbsp;</p>
   <h2 id='基于-langchain-的检索增强生成方法实现'><span>基于 LangChain 的检索增强生成方法实现</span></h2>
   <p><span>在这一部分中，我们将展示如何使用 Python，结合阿里云的大语言模型（Qwen）、Weaviate 的向量数据库，以及 text2vec-base
       嵌入模型，构建一个检索增强生成（RAG）流程。通过这个过程，我们将利用 LangChain 来进行整体的流程编排与管理。</span></p>
@@ -2954,20 +2948,16 @@ ol > li::marker {
   </blockquote>
   <p>&nbsp;</p>
   <p><span>下面展示了这一特定例子的 RAG 管道如何工作的图解：</span></p></br>
-  <p>&nbsp;</p>
   <div class="image-container">
     <img src="https://jacksonzjh.github.io/ai-tech/Ai-TechArticles/RetrievalAugmentedGeneration/images/p4.png" alt="Image Description"></br>
   </div>
-  <p>&nbsp;</p>
   <h2 id='总结'><span>总结</span></h2>
   <p><span>今天，我们深入了解了 RAG（检索增强生成）技术，这一概念最早在 2020 年发表的论文《面向知识密集型 NLP 任务的检索增强生成》中提出。文中详细讲解了 RAG 的理论基础，包括其动机与解决方案，并展示了如何使用
       Python 进行实现。整个实现过程结合了通义千问大语言模型（Qwen）、Weaviate 向量数据库和 text2vec-base 嵌入模型，同时利用 LangChain
       进行协调管理。希望本文对大家探索AI领域技术上有所帮助！</span></p></br>
-  <p>&nbsp;</p>
   <div class="image-container">
     <img src="https://jacksonzjh.github.io/ai-tech/Ai-TechArticles/RetrievalAugmentedGeneration/images/p4.png" alt="Image Description"></br>
   </div>
-  <p>&nbsp;</p>
   </div>
   </div>
 </body>
