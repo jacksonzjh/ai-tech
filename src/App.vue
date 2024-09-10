@@ -8,7 +8,7 @@
       <p><a href="mailto:jacksonzjh2023@gmail.com">Email</a> •  
       <a href="https://github.com/jacksonzjh" target="_blank">Github</a> •  
       <a href="https://huggingface.co/Qwen/Qwen2-7B-Instruct" target="_blank">AI</a></p>
-      <p>© 2024-2024  •  Jinhong  |  Made By AI</p>
+      <p>© 2024  •  Jinhong  |  Made By AI</p>
     </div>
   </div>
 </template>

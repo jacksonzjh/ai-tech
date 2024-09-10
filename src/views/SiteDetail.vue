@@ -16,10 +16,8 @@ export default {
   mounted() {
     const postId = this.$route.params.id;
     if (postId === '1') {
-      this.fetchHtmlContent('Ai-TechArticles/TypraMdEditorGuide.html', 'Typra - Markdown编辑器指南');
-    } else if (postId === '2') {
       this.fetchHtmlContent('Ai-TechArticles/PromptEngineeringGuide/PromptEngineeringGuide.html', '从零到精通提示工程(Prompt Engineering)');
-    } else if (postId === '3') {
+    } else if (postId === '2') {
       this.fetchHtmlContent('Ai-TechArticles/RetrievalAugmentedGeneration/RetrievalAugmentedGeneration.html', '检索增强生成（RAG）技术详解与LangChain实践');
     } else {
       this.fetchPost(postId);
@@ -28,8 +26,8 @@ export default {
   methods: {
     fetchPost(id) {
       const posts = [
-        { id: 1, title: 'Typra - Markdown编辑器指南', content: 'Content of the first post.' },
-        { id: 2, title: 'AI必学：从零到精通提示工程(Prompt Engineering)', content: 'Content of the second post.' }
+        { id: 1, title: '从零到精通提示工程(Prompt Engineering)', content: 'Content of the first post.' },
+        { id: 2, title: '检索增强生成（RAG）技术详解与LangChain实践', content: 'Content of the second post.' }
       ];
       this.post = posts.find(post => post.id === parseInt(id));
     },

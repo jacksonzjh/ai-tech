@@ -4,15 +4,26 @@
       <el-table :data="posts" style="width: 100%">
         <el-table-column prop="index" label="序号" width="100">
           <template slot-scope="scope">
-            <span>{{ scope.$index + 1 }}</span>
+            <span style="font-weight: bold;">{{ scope.$index + 1 }}</span>
           </template>
         </el-table-column>
-        <el-table-column label="封面" width="120">
+        <el-table-column label="封面" width="200">
+          <template #header>
+            <div style="text-align: left; padding-left: 75px;">
+              封面
+            </div>
+          </template>
           <template slot-scope="scope">
-            <img :src="scope.row.cover" alt="文章封面图" style="width: 100px; height: 100px; border-radius: 8px;">
+              <img :src="scope.row.cover" alt="文章封面图"
+                  style="width: 110px; height: 100px; border-radius: 8px; object-fit: cover; margin-left: 75px;">
           </template>
         </el-table-column>
         <el-table-column prop="title" label="文章标题">
+          <template #header>
+            <div style="text-align: left; padding-left: 135px;">
+              文章标题
+            </div>
+          </template>
           <template slot-scope="scope">
             <router-link :to="'/ai-techs/' + scope.row.id" class="router-link">
               <span style="font-weight: bold;">{{ scope.row.title }}</span>
@@ -30,9 +41,8 @@ export default {
   data() {
     return {
       posts: [
-        { id: 1, title: 'Typra - Markdown编辑器指南', cover: `${process.env.BASE_URL}Ai-TechArticles/typra.png` },
-        { id: 2, title: '从零到精通提示工程(Prompt Engineering)', cover: `${process.env.BASE_URL}Ai-TechArticles/PromptEngineeringGuide/images/封面图.png` },
-        { id: 3, title: '检索增强生成（RAG）技术详解与LangChain实践', cover: `${process.env.BASE_URL}Ai-TechArticles/RetrievalAugmentedGeneration/images/封面图.png` }
+        { id: 1, title: '从零到精通提示工程(Prompt Engineering)', cover: `${process.env.BASE_URL}Ai-TechArticles/PromptEngineeringGuide/images/封面图.png` },
+        { id: 2, title: '检索增强生成（RAG）技术详解与LangChain实践', cover: `${process.env.BASE_URL}Ai-TechArticles/RetrievalAugmentedGeneration/images/封面图.png` }
       ]
     };
   }
@@ -40,7 +50,6 @@ export default {
 </script>
 
 <style scoped>
-
 .site-list-container {
   background-color: #ffffff;
   padding: 40px 0;
@@ -59,11 +68,13 @@ export default {
 .centered-content .el-table {
   width: 80%;
   max-width: 935px;
+  
 }
 
 .router-link {
   color: #212323;
   text-decoration: none; /* 移除链接的默认下划线 */
+  padding-left: 137px;
 }
 
 .router-link:hover {
