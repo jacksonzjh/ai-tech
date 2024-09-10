@@ -31,7 +31,8 @@ export default {
     return {
       posts: [
         { id: 1, title: 'Typra - Markdown编辑器指南', cover: `${process.env.BASE_URL}Ai-TechArticles/typra.png` },
-        { id: 2, title: 'AI技术前沿：从零到精通提示工程(Prompt Engineering)', cover: `${process.env.BASE_URL}Ai-TechArticles/PromptEngineeringGuide/images/封面图.png` }
+        { id: 2, title: '从零到精通提示工程(Prompt Engineering)', cover: `${process.env.BASE_URL}Ai-TechArticles/PromptEngineeringGuide/images/封面图.png` },
+        { id: 3, title: '检索增强生成（RAG）技术详解与LangChain实践', cover: `${process.env.BASE_URL}Ai-TechArticles/RetrievalAugmentedGeneration/images/封面图.png` }
       ]
     };
   }

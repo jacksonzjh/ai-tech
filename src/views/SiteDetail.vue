@@ -18,7 +18,9 @@ export default {
     if (postId === '1') {
       this.fetchHtmlContent('Ai-TechArticles/TypraMdEditorGuide.html', 'Typra - Markdown编辑器指南');
     } else if (postId === '2') {
-      this.fetchHtmlContent('Ai-TechArticles/PromptEngineeringGuide/PromptEngineeringGuide.html', 'AI技术前沿：从零到精通提示工程(Prompt Engineering)');
+      this.fetchHtmlContent('Ai-TechArticles/PromptEngineeringGuide/PromptEngineeringGuide.html', '从零到精通提示工程(Prompt Engineering)');
+    } else if (postId === '3') {
+      this.fetchHtmlContent('Ai-TechArticles/RetrievalAugmentedGeneration/RetrievalAugmentedGeneration.html', '检索增强生成（RAG）技术详解与LangChain实践');
     } else {
       this.fetchPost(postId);
     }
