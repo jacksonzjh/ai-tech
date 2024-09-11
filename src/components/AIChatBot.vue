@@ -284,7 +284,7 @@ export default {
   padding: 7px;
   height: 80px;
   border-radius: 2px;
-  border: 1px solid #ccc;
+  border: 1px solid #6c6c6c;
   background-color: #f6f6f6;
   font-size: 14px;
   resize: none; /* 禁止手动拖动 */
@@ -382,7 +382,7 @@ export default {
 }
 
 .send-button {
-  background: linear-gradient(135deg, #28a745, #218838); /* 渐变绿色 */
+  background: linear-gradient(135deg, #38d05c, #2e7b3e); /* 渐变绿色 */
 }
 
 .clear-button:hover, .send-button:hover {
