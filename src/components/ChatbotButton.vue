@@ -50,53 +50,56 @@ import 'element-ui/lib/theme-chalk/index.css'; // 引入Element UI的样式
 export default {
   data() {
     return {
-      isExpanded: false, // 控制文本框是否展开
-      initialHeight: '80px', // 初始高度
-      expandedHeight: '450px', // 扩展后的高度
-      isSidebarVisible: false, // 控制 AI 聊天窗口的可见性
-      message: "", // 聊天输入内容
-      isDragging: false, // 控制拖拽
-      offset: { x: 0, y: 0 }, // 拖拽偏移
-      initialPosition: { top: '10%', left: '70%' }, // 初始位置
-      isTextareaFocused: false, // 输入框焦点状态，控制拖拽
+      isExpanded: false,
+      initialHeight: '80px',
+      expandedHeight: '450px',
+      isSidebarVisible: false,
+      message: "",
+      isDragging: false,
+      offset: { x: 0, y: 0 },
+      initialPosition: { top: '10%', left: '70%' },
+      isTextareaFocused: false,
     };
   },
   components: {
     'el-button': Button, // 注册Element UI按钮组件
   },
+  mounted() {
+    // 检测是否在文章页面，并调整 fwrite 的 padding
+    if (this.$route.name === 'SiteDetail' || this.$route.name === 'AboutMe') {
+      const fwriteElements = document.querySelectorAll('.fwrite');
+      fwriteElements.forEach(element => {
+        element.style.padding = '0'; // 动态覆盖文章页面 fwrite 的 padding
+      });
+    }
+  },
   methods: {
-    // 切换侧边栏显示状态
     toggleSidebar() {
       this.isSidebarVisible = !this.isSidebarVisible;
       this.$nextTick(() => {
-        // 初始弹出时置于机器人按钮上方
         const chatbot = this.$refs.chatbotSidebar;
-        chatbot.style.top = "50px"; // 调整到机器人按钮上方
+        chatbot.style.top = "50px";
         chatbot.style.right = "70px";
       });
     },
-    // 清空输入内容
     clearMessage() {
-      this.message = ''; 
+      this.message = '';
     },
-    // 发送消息
     sendMessage() {
       alert('发送的消息: ' + this.message);
-      this.clearMessage(); 
+      this.clearMessage();
     },
-    // 展开或收起文本框
     expandTextarea() {
       const textarea = document.querySelector('.limited-textarea');
       if (this.isExpanded) {
-        textarea.style.height = this.initialHeight; // 还原到初始高度
+        textarea.style.height = this.initialHeight;
       } else {
-        textarea.style.height = this.expandedHeight; // 设置为扩展高度
+        textarea.style.height = this.expandedHeight;
       }
       this.isExpanded = !this.isExpanded;
     },
-    // 开始拖拽事件
     startDrag(event) {
-      if (this.isTextareaFocused) return; // 如果输入框聚焦，则禁止拖拽
+      if (this.isTextareaFocused) return;
       const chatbot = this.$refs.chatbotSidebar;
       this.isDragging = true;
       this.offset.x = event.clientX - chatbot.offsetLeft;
@@ -104,7 +107,6 @@ export default {
       document.addEventListener('mousemove', this.drag);
       document.addEventListener('mouseup', this.stopDrag);
     },
-    // 拖拽处理
     drag(event) {
       if (!this.isDragging) return;
 
@@ -114,21 +116,17 @@ export default {
       const maxRight = window.innerWidth - chatbot.offsetWidth;
       const maxBottom = window.innerHeight - chatbot.offsetHeight;
 
-      // 边界控制，防止窗口被拖出屏幕
       chatbot.style.left = `${Math.min(Math.max(newX, 0), maxRight)}px`;
       chatbot.style.top = `${Math.min(Math.max(newY, 0), maxBottom)}px`;
     },
-    // 停止拖拽事件
     stopDrag() {
       this.isDragging = false;
       document.removeEventListener('mousemove', this.drag);
       document.removeEventListener('mouseup', this.stopDrag);
     },
-    // 当输入框获取焦点时禁用拖拽
     onTextareaFocus() {
       this.isTextareaFocused = true;
     },
-    // 当输入框失去焦点时恢复拖拽功能
     onTextareaBlur() {
       this.isTextareaFocused = false;
     },
@@ -156,7 +154,7 @@ export default {
 /* AI聊天侧边栏窗口样式，带有边缘弧度 */
 .chatbot-sidebar {
   position: fixed;
-  width: 420px; /* 固定宽度 */
+  width: 400px; /* 固定宽度 */
   height: 85vh; /* 高度占屏幕的85% */
   right: 45px; /* 靠右45px */
   bottom: 20px; /* 距离底部20px，防止撑到页面底部 */
@@ -336,5 +334,9 @@ export default {
 img {
   max-width: 100%; /* 防止图像撑出父容器 */
   height: auto; /* 保持图片的纵横比 */
+}
+
+* {
+  box-sizing: border-box; /* 强制所有元素使用 border-box 模式 */
 }
 </style>
