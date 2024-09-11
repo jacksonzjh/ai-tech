@@ -160,7 +160,7 @@ export default {
   height: 85vh; /* 高度占屏幕的85% */
   right: 45px; /* 靠右45px */
   bottom: 20px; /* 距离底部20px，防止撑到页面底部 */
-  background-color: white;
+  background-color: #f6f6f6;
   box-shadow: -2px 0 10px rgba(0, 0, 0, 0.2); /* 阴影效果 */
   display: flex;
   flex-direction: column;
@@ -180,7 +180,7 @@ export default {
 
 /* Header 样式 */
 .header {
-  background: linear-gradient(135deg, #000000, #333333); /* 渐变黑色 */
+  background: linear-gradient(135deg, #0c3d3c, #000000); /* 渐变黑色 */
   color: white;
   padding: 10px;
   display: flex;
@@ -214,7 +214,7 @@ export default {
 }
 
 .close-button:hover {
-  background: linear-gradient(135deg, #ff4d4d, #ff0000);
+  background: linear-gradient(135deg, #ff6767, #ff0000);
   width: 30px;  /* 保持正方形 */
   height: 30px; /* 保持正方形 */
   border-radius: 5px; /* 将圆角调整为小的圆角，保留正方形 */
@@ -231,7 +231,7 @@ export default {
   bottom: 0;
   width: 400px;
   padding: 10px;
-  background-color: #ffffff;
+  background-color: #f6f6f6;
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
   min-height: 120px; /* 设置最小高度，扩展空间 */
@@ -244,6 +244,7 @@ export default {
   padding: 10px;
   border-radius: 8px;
   border: 1px solid #ccc;
+  background-color: #f6f6f6;
   font-size: 14px;
   resize: none; /* 禁止手动拖动 */
   overflow-y: auto;
@@ -276,6 +277,7 @@ export default {
   display: flex;
   justify-content: space-between; /* 均匀分布 */
   align-items: center; /* 垂直居中对齐 */
+  background-color: #f6f6f6;
   margin-top: 10px;
 }
 
@@ -299,7 +301,7 @@ export default {
 }
 
 .clear-button {
-  background: linear-gradient(135deg, #000000, #333333); /* 渐变黑色 */
+  background: linear-gradient(135deg, #000000, #767676); /* 渐变黑色 */
 }
 
 .send-button {
