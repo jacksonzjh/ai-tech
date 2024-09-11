@@ -18,7 +18,7 @@ src
 ├── assets
 ├── components
 │   ├── BackToTopButton.vue
-│   ├── ChatbotButton.vue
+│   ├── AIChatBot.vue
 │   └── NavBar.vue
 ├── main.js
 ├── router
@@ -32,9 +32,18 @@ src
 
 ## 技术栈
 
-* 前端：Vue
-* LLM：Qwen2-7B-Instruct
-* Agent：Dify、Flask
+```plaintext
+JH AI Learning
+├── 前端
+│   ├── 页面开发：Vue
+│   ├── AI大模型集成：moonshot-v1-8k api
+│   └── 服务托管：Vercel
+│
+└── 后端
+    ├── AI提示工程：结构化Prompt
+    ├── RAG知识库：Langchain
+    └── 向量数据库：Qdrant
+```
 
 ## 许可证
 

@@ -3,7 +3,7 @@
     <NavBar />
     <router-view />
     <BackToTopButton />
-    <ChatbotButton /> <!-- 添加聊天机器人按钮 -->
+    <AIChatBot />
     <div class="footer">
       <p><a href="mailto:jacksonzjh2023@gmail.com">Email</a> •  
       <a href="https://github.com/jacksonzjh" target="_blank">Github</a> •  
@@ -16,14 +16,14 @@
 <script>
 import NavBar from './components/NavBar.vue'
 import BackToTopButton from './components/BackToTopButton.vue'
-import ChatbotButton from './components/ChatbotButton.vue' // 导入聊天机器人按钮组件
+import AIChatBot from './components/AIChatBot.vue' // 导入聊天机器人按钮组件
 
 export default {
   name: 'App',
   components: {
     NavBar,
     BackToTopButton,
-    ChatbotButton // 注册聊天机器人按钮组件
+    AIChatBot
   }
 }
 </script>
