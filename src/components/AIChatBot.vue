@@ -15,7 +15,7 @@
           <div class="status">
             <!-- 根据status值显示不同颜色的指示灯 -->
             <span v-if="status === 'online'" class="indicator-green"></span>
-            <span v-else-if="status === 'training'" class="indicator-red"></span>
+            <span v-else-if="status === 'offline'" class="indicator-red"></span>
             <span class="status-text">{{ statusText }}</span>
           </div>
         </div>
@@ -66,12 +66,12 @@ export default {
       offset: { x: 0, y: 0 },
       initialPosition: { top: '10%', left: '70%' },
       isTextareaFocused: false,
-      status: 'training', // 'online' 或 'training'
+      status: 'offline', // 'online' 或 'offline'
     };
   },
   computed: {
     statusText() {
-      return this.status === 'online' ? '在线' : '模型训练中';
+      return this.status === 'online' ? 'moonshot-v1-8k' : '模型未上线';
     }
   },
   components: {
@@ -79,7 +79,7 @@ export default {
   },
   methods: {
     toggleStatus() {
-      this.status = this.status === 'online' ? 'training' : 'online';
+      this.status = this.status === 'online' ? 'offline' : 'online';
     },
     toggleSidebar() {
       this.isSidebarVisible = !this.isSidebarVisible;
