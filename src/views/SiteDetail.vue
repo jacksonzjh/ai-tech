@@ -19,6 +19,8 @@ export default {
       this.fetchHtmlContent('Ai-TechArticles/PromptEngineeringGuide/PromptEngineeringGuide.html', '从零到精通提示工程(Prompt Engineering)');
     } else if (postId === '2') {
       this.fetchHtmlContent('Ai-TechArticles/RetrievalAugmentedGeneration/RetrievalAugmentedGeneration.html', '检索增强生成（RAG）技术详解与LangChain实践');
+    } else if (postId === '3') {
+      this.fetchHtmlContent('Ai-TechArticles/AiNeedGpu/AiNeedGpu.html', '一文读懂AI生态下（训练-推理-使用）为何离不开GPU的身影');
     } else {
       this.fetchPost(postId);
     }
@@ -27,7 +29,8 @@ export default {
     fetchPost(id) {
       const posts = [
         { id: 1, title: '从零到精通提示工程(Prompt Engineering)', content: 'Content of the first post.' },
-        { id: 2, title: '检索增强生成（RAG）技术详解与LangChain实践', content: 'Content of the second post.' }
+        { id: 2, title: '检索增强生成（RAG）技术详解与LangChain实践', content: 'Content of the second post.' },
+        { id: 3, title: '一文读懂AI生态下（训练-推理-使用）为何离不开GPU的身影', content: 'Content of the third post.' }
       ];
       this.post = posts.find(post => post.id === parseInt(id));
     },
