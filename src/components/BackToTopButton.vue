@@ -28,14 +28,14 @@ export default {
     };
   },
   mounted() {
-    window.addEventListener('scroll', this.toggleVisibility);
+    window.addEventListener('scroll', this.updateScroll);
   },
   beforeDestroy() {
-    window.removeEventListener('scroll', this.toggleVisibility);
+    window.removeEventListener('scroll', this.updateScroll);
   },
   methods: {
-    toggleVisibility() {
-      this.isVisible = window.pageYOffset > 300;
+    updateScroll() {
+      this.isVisible = window.scrollY > 300;
     },
     scrollToTop() {
       window.scrollTo({
@@ -61,6 +61,7 @@ export default {
   align-items: center;
   width: 45px; /* 根据需要调整大小 */
   height: 45px;
+  transition: background-color 0.3s ease; /* 添加平滑过渡 */
 }
 
 .back-to-top:hover {

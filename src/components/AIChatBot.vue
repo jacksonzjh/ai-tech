@@ -11,7 +11,7 @@
       <div class="header">
         <div class="header-content">
           <img class="header-logo" src="@/assets/chatbot.png" alt="Chatbot Logo" />
-          <span class="title">小鸿AI问答助手</span>
+          <span class="title">本站AI问答助手</span>
           <div class="status">
             <!-- 根据status值显示不同颜色的指示灯 -->
             <span v-if="status === 'online'" class="indicator-green"></span>

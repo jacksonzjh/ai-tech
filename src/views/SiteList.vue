@@ -43,7 +43,8 @@ export default {
       posts: [
         { id: 1, title: '从零到精通提示工程(Prompt Engineering)', cover: `${process.env.BASE_URL}Ai-TechArticles/PromptEngineeringGuide/images/封面图.png` },
         { id: 2, title: '检索增强生成（RAG）技术详解与LangChain实践', cover: `${process.env.BASE_URL}Ai-TechArticles/RetrievalAugmentedGeneration/images/封面图.png` },
-        { id: 3, title: '一文读懂AI生态下（训练-推理-使用）为何离不开GPU的身影', cover: `${process.env.BASE_URL}Ai-TechArticles/AiNeedGpu/images/封面图.png` }
+        { id: 3, title: '一文读懂AI生态下（训练-推理-使用）为何离不开GPU的身影', cover: `${process.env.BASE_URL}Ai-TechArticles/AiNeedGpu/images/封面图.png` },
+        { id: 4, title: '精读 · AI Agent —— 从理解到实现', cover: `${process.env.BASE_URL}Ai-TechArticles/AiAgent/images/封面图.png` }
       ]
     };
   }
